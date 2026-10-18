@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    [
+      "ruff",
+      "check",
+      "--ignore",
+      "E402",
+      "--output-format",
+      "concise",
+      ".cache/ab_review_combined"
+    ],
+    [
+      "ruff",
+      "check",
+      "src/industrial_maintenance/experiment_review.py",
+      "scripts/check_ab_review.py",
+      "scripts/check_eda.py",
+      "tests/test_experiment_review.py",
+      "tests/test_notebook_runner.py"
+    ]
+  ],
+  "combined_cell_exception": "E402: imports at beginnings of independent notebook cells",
+  "whole_project_checked": false
+}

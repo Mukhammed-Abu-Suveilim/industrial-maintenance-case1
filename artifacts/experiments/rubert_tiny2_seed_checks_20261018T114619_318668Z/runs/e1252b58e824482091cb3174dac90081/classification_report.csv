@@ -1,0 +1,10 @@
+,precision,recall,f1-score,support
+bearing_wear,1.0,1.0,1.0,255.0
+cavitation,1.0,1.0,1.0,222.0
+imbalance,1.0,1.0,1.0,232.0
+normal,1.0,1.0,1.0,1005.0
+overheat,1.0,1.0,1.0,252.0
+seal_leak,1.0,1.0,1.0,227.0
+accuracy,1.0,1.0,1.0,1.0
+macro avg,1.0,1.0,1.0,2193.0
+weighted avg,1.0,1.0,1.0,2193.0

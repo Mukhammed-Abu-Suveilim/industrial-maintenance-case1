@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "wording_batch": "artifacts/experiments/rubert_tiny2_wording_20261018T120315_889189Z",
+  "pairs": 24,
+  "source_observations": 6,
+  "model_target_pairs": 8,
+  "prediction_rows_per_model_target": 48,
+  "human_review": "approved",
+  "new_training_runs": 0,
+  "failure_labels_created": false,
+  "test_evaluated": false,
+  "recovery": {
+    "error": "DataFrame.style name collision",
+    "fix": "explicit column indexing",
+    "additional_training_runs": 0,
+    "fresh_kernel_replay_passed": true
+  }
+}

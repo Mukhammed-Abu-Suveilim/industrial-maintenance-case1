@@ -1,0 +1,4 @@
+2026-10-17 23:11:23,692 INFO Начало эксперимента: logistic_restricted_f2_20261017T201122_790479Z
+2026-10-17 23:11:23,923 INFO Train=10655; validation=2193; test не оценивается
+2026-10-17 23:11:24,160 INFO Обучение failure_within_30d__A_numeric__C0.001__none; run_id=6e7bc1cb575846deab4b1c55c23bd47f
+2026-10-17 23:11:24,270 INFO Завершено failure_within_30d__A_numeric__C0.001__none; сходимость=True

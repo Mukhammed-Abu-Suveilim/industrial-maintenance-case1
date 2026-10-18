@@ -1,0 +1,49 @@
+id,pair_id,source_id,kind,operator_log,inherited_fault_type,style,synthetic
+normal_order__original,normal_order,5,original,"Работа оборудования стабильна, посторонних шумов нет. Нагрузка 46%.",normal,word_order,True
+normal_synonyms__original,normal_synonyms,5,original,"Работа оборудования стабильна, посторонних шумов нет. Нагрузка 46%.",normal,synonyms,True
+normal_short__original,normal_short,5,original,"Работа оборудования стабильна, посторонних шумов нет. Нагрузка 46%.",normal,short_note,True
+normal_conversational__original,normal_conversational,5,original,"Работа оборудования стабильна, посторонних шумов нет. Нагрузка 46%.",normal,conversational,True
+seal_order__original,seal_order,13,original,Обнаружены следы утечки в зоне уплотнения и снижение давления. Нагрузка 93%.,seal_leak,word_order,True
+seal_synonyms__original,seal_synonyms,13,original,Обнаружены следы утечки в зоне уплотнения и снижение давления. Нагрузка 93%.,seal_leak,synonyms,True
+seal_short__original,seal_short,13,original,Обнаружены следы утечки в зоне уплотнения и снижение давления. Нагрузка 93%.,seal_leak,short_note,True
+seal_conversational__original,seal_conversational,13,original,Обнаружены следы утечки в зоне уплотнения и снижение давления. Нагрузка 93%.,seal_leak,conversational,True
+cavitation_order__original,cavitation_order,14,original,"Слышен характерный шум, давление нестабильно, наблюдается вибрация. Нагрузка 50%.",cavitation,word_order,True
+cavitation_synonyms__original,cavitation_synonyms,14,original,"Слышен характерный шум, давление нестабильно, наблюдается вибрация. Нагрузка 50%.",cavitation,synonyms,True
+cavitation_short__original,cavitation_short,14,original,"Слышен характерный шум, давление нестабильно, наблюдается вибрация. Нагрузка 50%.",cavitation,short_note,True
+cavitation_conversational__original,cavitation_conversational,14,original,"Слышен характерный шум, давление нестабильно, наблюдается вибрация. Нагрузка 50%.",cavitation,conversational,True
+imbalance_order__original,imbalance_order,39,original,После выхода на режим появилась повышенная вибрация и биение. Нагрузка 52%.,imbalance,word_order,True
+imbalance_synonyms__original,imbalance_synonyms,39,original,После выхода на режим появилась повышенная вибрация и биение. Нагрузка 52%.,imbalance,synonyms,True
+imbalance_short__original,imbalance_short,39,original,После выхода на режим появилась повышенная вибрация и биение. Нагрузка 52%.,imbalance,short_note,True
+imbalance_conversational__original,imbalance_conversational,39,original,После выхода на режим появилась повышенная вибрация и биение. Нагрузка 52%.,imbalance,conversational,True
+overheat_order__original,overheat_order,94,original,Зафиксирован устойчивый рост температуры корпуса при рабочей нагрузке. Нагрузка 43%.,overheat,word_order,True
+overheat_synonyms__original,overheat_synonyms,94,original,Зафиксирован устойчивый рост температуры корпуса при рабочей нагрузке. Нагрузка 43%.,overheat,synonyms,True
+overheat_short__original,overheat_short,94,original,Зафиксирован устойчивый рост температуры корпуса при рабочей нагрузке. Нагрузка 43%.,overheat,short_note,True
+overheat_conversational__original,overheat_conversational,94,original,Зафиксирован устойчивый рост температуры корпуса при рабочей нагрузке. Нагрузка 43%.,overheat,conversational,True
+bearing_order__original,bearing_order,112,original,Оператор отмечает нарастающий гул в зоне подшипников и вибрацию. Нагрузка 82%.,bearing_wear,word_order,True
+bearing_synonyms__original,bearing_synonyms,112,original,Оператор отмечает нарастающий гул в зоне подшипников и вибрацию. Нагрузка 82%.,bearing_wear,synonyms,True
+bearing_short__original,bearing_short,112,original,Оператор отмечает нарастающий гул в зоне подшипников и вибрацию. Нагрузка 82%.,bearing_wear,short_note,True
+bearing_conversational__original,bearing_conversational,112,original,Оператор отмечает нарастающий гул в зоне подшипников и вибрацию. Нагрузка 82%.,bearing_wear,conversational,True
+normal_order__paraphrase,normal_order,5,paraphrase,"При нагрузке 46% посторонних шумов нет, оборудование работает стабильно.",normal,word_order,True
+normal_synonyms__paraphrase,normal_synonyms,5,paraphrase,Агрегат функционирует ровно; никаких необычных звуков не слышно. Загрузка составляет 46%.,normal,synonyms,True
+normal_short__paraphrase,normal_short,5,paraphrase,Нагрузка: 46%. Режим устойчивый. Чуждых работе звуков не обнаружено.,normal,short_note,True
+normal_conversational__paraphrase,normal_conversational,5,paraphrase,На 46% нагрузки всё работает ровно. Каких-либо посторонних звуков не слышу.,normal,conversational,True
+seal_order__paraphrase,seal_order,13,paraphrase,При нагрузке 93% давление снизилось; возле уплотнения обнаружены следы утечки.,seal_leak,word_order,True
+seal_synonyms__paraphrase,seal_synonyms,13,paraphrase,"Уплотнительный узел имеет признаки подтекания, напор стал ниже. Агрегат загружен на 93%.",seal_leak,synonyms,True
+seal_short__paraphrase,seal_short,13,paraphrase,Нагрузка: 93%. Подтекание около уплотнения. Отмечено падение давления.,seal_leak,short_note,True
+seal_conversational__paraphrase,seal_conversational,13,paraphrase,"Работаем на 93% нагрузки. В районе уплотнения видны подтёки, а давление упало.",seal_leak,conversational,True
+cavitation_order__paraphrase,cavitation_order,14,paraphrase,"При нагрузке 50% наблюдается вибрация и нестабильное давление, слышен характерный шум.",cavitation,word_order,True
+cavitation_synonyms__paraphrase,cavitation_synonyms,14,paraphrase,"На половинной загрузке, 50%, агрегат дрожит, напор колеблется, слышится характерный шум.",cavitation,synonyms,True
+cavitation_short__paraphrase,cavitation_short,14,paraphrase,Нагрузка: 50%. Характерный шум. Давление колеблется. Есть вибрация.,cavitation,short_note,True
+cavitation_conversational__paraphrase,cavitation_conversational,14,paraphrase,"Держим нагрузку 50%. Слышу характерный шум, оборудование вибрирует, давление не держится ровно.",cavitation,conversational,True
+imbalance_order__paraphrase,imbalance_order,39,paraphrase,Нагрузка 52%. Повышенная вибрация и биение появились после выхода оборудования на режим.,imbalance,word_order,True
+imbalance_synonyms__paraphrase,imbalance_synonyms,39,paraphrase,"Как только агрегат достиг рабочего режима, усилились колебания и возникло биение. Загрузка 52%.",imbalance,synonyms,True
+imbalance_short__paraphrase,imbalance_short,39,paraphrase,Нагрузка: 52%. Выход на режим — затем повышенная вибрация с биением.,imbalance,short_note,True
+imbalance_conversational__paraphrase,imbalance_conversational,39,paraphrase,"При нагрузке 52% вывели оборудование на режим, после чего стало заметно сильнее вибрировать и появилось биение.",imbalance,conversational,True
+overheat_order__paraphrase,overheat_order,94,paraphrase,При рабочей нагрузке 43% температура корпуса устойчиво растёт.,overheat,word_order,True
+overheat_synonyms__paraphrase,overheat_synonyms,94,paraphrase,Корпус агрегата при работе на 43% нагрузки становится всё горячее; повышение температуры продолжается.,overheat,synonyms,True
+overheat_short__paraphrase,overheat_short,94,paraphrase,Нагрузка: 43%. Температура корпуса: устойчивый рост при работе.,overheat,short_note,True
+overheat_conversational__paraphrase,overheat_conversational,94,paraphrase,"Оборудование работает с нагрузкой 43%, и его корпус постепенно нагревается всё сильнее.",overheat,conversational,True
+bearing_order__paraphrase,bearing_order,112,paraphrase,При нагрузке 82% оператор наблюдает вибрацию и нарастающий гул в зоне подшипников.,bearing_wear,word_order,True
+bearing_synonyms__paraphrase,bearing_synonyms,112,paraphrase,"Подшипниковый узел гудит всё громче, агрегат дрожит. Загрузка составляет 82%.",bearing_wear,synonyms,True
+bearing_short__paraphrase,bearing_short,112,paraphrase,Нагрузка: 82%. Подшипники: гул усиливается. Есть вибрация.,bearing_wear,short_note,True
+bearing_conversational__paraphrase,bearing_conversational,112,paraphrase,"Работаем при нагрузке 82%. Около подшипников гудит всё сильнее, чувствуется вибрация.",bearing_wear,conversational,True

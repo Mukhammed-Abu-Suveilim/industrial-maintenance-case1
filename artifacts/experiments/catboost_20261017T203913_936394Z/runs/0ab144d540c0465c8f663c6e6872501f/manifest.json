@@ -1,0 +1,523 @@
+{
+  "batch_id": "catboost_20261017T203913_936394Z",
+  "status": "completed",
+  "started_at_utc": "2026-10-17T20:39:13.936394+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "mlflow": "3.17.1",
+    "scipy": "1.17.1",
+    "catboost": "1.2.10"
+  },
+  "config": {
+    "dataset_config": "configs/eda_16_10.json",
+    "membership_file": "Data/splits/eda_v1/membership.csv",
+    "split_manifest": "Data/splits/eda_v1/manifest.json",
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+    "output_root": "artifacts/experiments",
+    "tracking_database": "artifacts/tracking/mlflow.db",
+    "tracking_artifacts": "artifacts/tracking/mlflow_artifacts",
+    "seed": 42,
+    "binary_threshold": 0.5,
+    "selection_decimals": 12,
+    "error_examples": 10,
+    "targets": {
+      "failure_within_30d": "average_precision",
+      "fault_type": "macro_f1"
+    },
+    "excluded_features": [
+      "required_route",
+      "severity"
+    ],
+    "feature_policy": {
+      "decision_date": "2026-10-17",
+      "basis": "Решение пользователя: исключить required_route и severity из всех обучающих входов."
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42
+    },
+    "threshold_selection": {
+      "metric": "f2",
+      "beta": 2,
+      "selection_split": "validation",
+      "positive_class": 1,
+      "decision_rule": "probability_1 >= threshold",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "selection_decimals": 12,
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "feature_variants": {
+      "A_numeric": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio"
+        ],
+        "categorical": []
+      },
+      "A_tabular_restricted": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio",
+          "horizon_days"
+        ],
+        "categorical": [
+          "equipment",
+          "manual_id"
+        ]
+      }
+    },
+    "baseline_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+    "precision_floors": [
+      0.7,
+      0.8
+    ],
+    "expected_new_runs": 64,
+    "expected_selected_models": 4,
+    "expected_threshold_models": 2,
+    "expected_f2_comparisons": 4,
+    "notebook_timeout": 1800,
+    "fit_split": "train",
+    "refit": false,
+    "family": "catboost",
+    "experiment_name": "case_1_catboost_restricted_validation",
+    "batch_prefix": "catboost_",
+    "notebook": "notebooks/experiments/03_catboost.ipynb",
+    "model_parameters": {
+      "iterations": 500,
+      "boosting_type": "Plain",
+      "random_seed": 42,
+      "task_type": "CPU",
+      "thread_count": 6,
+      "use_best_model": false,
+      "allow_writing_files": false,
+      "verbose": false
+    },
+    "loss_functions": {
+      "failure_within_30d": "Logloss",
+      "fault_type": "MultiClass"
+    },
+    "search": {
+      "depth": [
+        4,
+        6
+      ],
+      "learning_rate": [
+        0.03,
+        0.1
+      ],
+      "l2_leaf_reg": [
+        3,
+        10
+      ],
+      "auto_class_weights": [
+        null,
+        "Balanced"
+      ]
+    },
+    "random_forest_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+    "expected_primary_comparisons": 16,
+    "tie_breakers": [
+      "smaller depth",
+      "larger l2_leaf_reg",
+      "smaller learning_rate",
+      "no class weights"
+    ]
+  },
+  "dataset_config": {
+    "analysis_id": "EDA-16-10",
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "seed": 42,
+    "split_version": "eda_v1",
+    "n_splits": 7,
+    "test_fold": 0,
+    "validation_fold": 1,
+    "split_group": "normalized_exact_operator_log",
+    "output_root": "artifacts/eda/EDA-16-10",
+    "notebook": "notebooks/eda/EDA-16-10.ipynb",
+    "source_notebooks": [
+      "notebooks/01_eda.ipynb",
+      "notebooks/team work/LLM_project.ipynb",
+      "notebooks/team work/LLM_project_(2).ipynb"
+    ],
+    "numeric_columns": [
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "horizon_days"
+    ],
+    "categorical_columns": [
+      "equipment",
+      "manual_id",
+      "severity",
+      "required_route"
+    ],
+    "targets": [
+      "failure_within_30d",
+      "fault_type"
+    ],
+    "min_token_documents": 10,
+    "top_tokens": 10,
+    "examples_per_class": 2,
+    "top_categories_plot": 20,
+    "iqr_multiplier": 1.5,
+    "load_tolerance_percentage_points": 1.0,
+    "comparison_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "near_duplicate_rounding": {
+      "operating_hours": -2,
+      "temperature_c": 0,
+      "vibration_mm_s": 1,
+      "pressure_bar": 1,
+      "load_ratio": 2
+    },
+    "availability": {
+      "equipment": "available_by_assumption",
+      "operating_hours": "available_by_assumption",
+      "temperature_c": "available_by_assumption",
+      "vibration_mm_s": "available_by_assumption",
+      "pressure_bar": "available_by_assumption",
+      "load_ratio": "available_by_assumption",
+      "operator_log": "available_by_assumption",
+      "manual_id": "available_by_assumption",
+      "severity": "available_by_assumption",
+      "required_route": "available_by_assumption",
+      "horizon_days": "available_by_assumption",
+      "id": "available_by_assumption"
+    },
+    "availability_basis": "Допущение пользователя от 2026-10-16: все нецелевые поля доступны на момент прогноза."
+  },
+  "source": {
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "rows": 15000,
+    "columns": [
+      "id",
+      "equipment",
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "operator_log",
+      "manual_id",
+      "fault_type",
+      "severity",
+      "required_route",
+      "horizon_days",
+      "failure_within_30d"
+    ],
+    "bytes": 3257589
+  },
+  "split": {
+    "protocol": {
+      "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+      "seed": 42,
+      "n_splits": 7,
+      "test_fold": 0,
+      "validation_fold": 1,
+      "split_group": "normalized_exact_operator_log"
+    },
+    "description": "Одинаковые operator_log после приведения регистра/пробелов остаются вместе; стратификация по паре целевых меток приблизительна.",
+    "limitation": "Общие тексты после маскирования чисел могут пересекать выборки. Это не временная проверка и не доказательство качества на неизвестных шаблонах или машинах.",
+    "sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1"
+  },
+  "source_checksums": {
+    "baseline.py": "3b370aee4d605425cb7744500996e1cdbc6a7a3db9ed227e41e03c7c019d98db",
+    "data.py": "2a7a4bdff2f9f79884aebe4bcfc7082b23346c91bff265a81c92476af4aef353",
+    "comparison.py": "d0ccf2e0cb91e9711e4932833581fa2fefac0938e0db1c49fb37d5d93d5646e5",
+    "ensembles.py": "433c804113faac6f6bef412c64146f48c3ebcebf0af183185cd47d963f4e9b2b"
+  },
+  "notebook_source_sha256": "a5d07f12756e5f63e579b7972a27b256044289317fac4c6864c02fdd4d33b846",
+  "config_sha256": "7030e63d1124179a170dc869b9814b94ab74198bfc4124c5861d2bafa300176b",
+  "test_evaluated": false,
+  "selection_scope": "validation; train only for fitting",
+  "tracking_uri": "sqlite:///C:/Users/Mo/work/study/Магистратура/2к/1с/LLMs/artifacts/tracking/mlflow.db",
+  "authors": "Фактическое авторство участников требует подтверждения",
+  "hardware": {
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "machine": "AMD64",
+    "logical_cpus": 12,
+    "training_device": "CPU"
+  },
+  "reference_checksums": {
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/manifest.json": "fb078d745ff1c6c8dd00312e415cbd9b104bbb652b622872ebc8e01508979cbe",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/selected_models.csv": "0ce77bde4e0839892f94e76ccbada943a0d05f9ea7d76c8195d11b87ae3d977b",
+    "artifacts/experiments/random_forest_20261017T203223_834932Z/manifest.json": "3f002f026b6f21e02f64ce07008f19f0e47bc29f976e149fe13de5b9b61455a4",
+    "artifacts/experiments/random_forest_20261017T203223_834932Z/selected_models.csv": "55986f7e9c6617e19d23bdad5bde9b9afa5c59c869d4533e971426c1e9b62bcb"
+  },
+  "run_id": "0ab144d540c0465c8f663c6e6872501f",
+  "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/0ab144d540c0465c8f663c6e6872501f",
+  "target": "failure_within_30d",
+  "variant": "A_tabular_restricted",
+  "classes": [
+    0,
+    1
+  ],
+  "features": [
+    "operating_hours",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "load_ratio",
+    "horizon_days",
+    "equipment",
+    "manual_id"
+  ],
+  "model_parameters": {
+    "iterations": 500,
+    "boosting_type": "Plain",
+    "random_seed": 42,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "use_best_model": false,
+    "allow_writing_files": false,
+    "verbose": false,
+    "auto_class_weights": null,
+    "depth": 4,
+    "l2_leaf_reg": 10,
+    "learning_rate": 0.03,
+    "loss_function": "Logloss"
+  },
+  "resolved_parameters": {
+    "nan_mode": "Min",
+    "eval_metric": "Logloss",
+    "combinations_ctr": [
+      "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+      "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+    ],
+    "iterations": 500,
+    "sampling_frequency": "PerTree",
+    "fold_permutation_block": 0,
+    "leaf_estimation_method": "Newton",
+    "random_score_type": "NormalWithModelSizeDecrease",
+    "counter_calc_method": "SkipTest",
+    "grow_policy": "SymmetricTree",
+    "penalties_coefficient": 1,
+    "boosting_type": "Plain",
+    "model_shrink_mode": "Constant",
+    "feature_border_type": "GreedyLogSum",
+    "ctr_leaf_count_limit": 18446744073709551615,
+    "bayesian_matrix_reg": 0.10000000149011612,
+    "one_hot_max_size": 2,
+    "eval_fraction": 0,
+    "force_unit_auto_pair_weights": false,
+    "l2_leaf_reg": 10,
+    "random_strength": 1,
+    "rsm": 1,
+    "boost_from_average": false,
+    "max_ctr_complexity": 4,
+    "model_size_reg": 0.5,
+    "simple_ctr": [
+      "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+      "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+    ],
+    "pool_metainfo_options": {
+      "tags": {}
+    },
+    "subsample": 0.800000011920929,
+    "use_best_model": false,
+    "class_names": [
+      0,
+      1
+    ],
+    "random_seed": 42,
+    "depth": 4,
+    "ctr_target_border_count": 1,
+    "posterior_sampling": false,
+    "has_time": false,
+    "store_all_simple_ctr": false,
+    "border_count": 254,
+    "classes_count": 0,
+    "auto_class_weights": "None",
+    "sparse_features_conflict_fraction": 0,
+    "leaf_estimation_backtracking": "AnyImprovement",
+    "best_model_min_trees": 1,
+    "model_shrink_rate": 0,
+    "min_data_in_leaf": 1,
+    "loss_function": "Logloss",
+    "learning_rate": 0.029999999329447743,
+    "score_function": "Cosine",
+    "task_type": "CPU",
+    "leaf_estimation_iterations": 10,
+    "bootstrap_type": "MVS",
+    "max_leaves": 16,
+    "permutation_count": 4
+  },
+  "metrics": {
+    "train": {
+      "accuracy": 0.8938526513374003,
+      "macro_f1": 0.7926418195203037,
+      "log_loss": 0.19685340290071837,
+      "precision": 0.729312762973352,
+      "recall": 0.5826330532212886,
+      "f1": 0.6477732793522267,
+      "f2": 0.6070511323838431,
+      "roc_auc": 0.9533353544348968,
+      "average_precision": 0.8053256588531932
+    },
+    "validation": {
+      "accuracy": 0.8873689010487916,
+      "macro_f1": 0.7827027417345799,
+      "log_loss": 0.2071560963282591,
+      "precision": 0.6883116883116883,
+      "recall": 0.5840220385674931,
+      "f1": 0.6318926974664679,
+      "f2": 0.6022727272727273,
+      "roc_auc": 0.9472278673470923,
+      "average_precision": 0.78399844772425
+    }
+  },
+  "fit_seconds": 6.5941749999983585,
+  "warnings": [],
+  "fit_inputs": {
+    "split": "train",
+    "eval_set": null,
+    "refit": false
+  },
+  "train_class_counts": {
+    "0": 8870,
+    "1": 1785
+  },
+  "threshold_selection": {
+    "run_id": "0ab144d540c0465c8f663c6e6872501f",
+    "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/0ab144d540c0465c8f663c6e6872501f",
+    "variant": "A_tabular_restricted",
+    "default_threshold": 0.5,
+    "selected_threshold": 0.13651169820466486,
+    "candidate_count": 2196,
+    "default_precision": 0.6883116883116883,
+    "selected_precision": 0.5056980056980057,
+    "delta_precision": -0.1826136826136826,
+    "default_recall": 0.5840220385674931,
+    "selected_recall": 0.977961432506887,
+    "delta_recall": 0.3939393939393939,
+    "default_f1": 0.6318926974664679,
+    "selected_f1": 0.6666666666666666,
+    "delta_f1": 0.03477396920019871,
+    "default_f2": 0.6022727272727273,
+    "selected_f2": 0.8240482822655525,
+    "delta_f2": 0.2217755549928252,
+    "default_average_precision": 0.78399844772425,
+    "selected_average_precision": 0.78399844772425,
+    "delta_average_precision": 0.0,
+    "default_roc_auc": 0.9472278673470923,
+    "selected_roc_auc": 0.9472278673470923,
+    "delta_roc_auc": 0.0,
+    "default_tp": 212,
+    "selected_tp": 355,
+    "delta_tp": 143,
+    "default_fp": 96,
+    "selected_fp": 347,
+    "delta_fp": 251,
+    "default_tn": 1734,
+    "selected_tn": 1483,
+    "delta_tn": -251,
+    "default_fn": 151,
+    "selected_fn": 8,
+    "delta_fn": -143,
+    "selection": {
+      "metric": "f2",
+      "beta": 2,
+      "selection_split": "validation",
+      "positive_class": 1,
+      "decision_rule": "probability_1 >= threshold",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "selection_decimals": 12,
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "metrics": {
+      "train": {
+        "default": {
+          "accuracy": 0.8938526513374003,
+          "macro_f1": 0.7926418195203037,
+          "log_loss": 0.19685340290071837,
+          "precision": 0.729312762973352,
+          "recall": 0.5826330532212886,
+          "f1": 0.6477732793522267,
+          "f2": 0.6070511323838431,
+          "roc_auc": 0.9533353544348968,
+          "average_precision": 0.8053256588531932
+        },
+        "selected": {
+          "accuracy": 0.8456123885499766,
+          "macro_f1": 0.7901417448912358,
+          "log_loss": 0.19685340290071837,
+          "precision": 0.5206367924528302,
+          "recall": 0.9893557422969188,
+          "f1": 0.6822484064129805,
+          "f2": 0.8383972654766426,
+          "roc_auc": 0.9533353544348968,
+          "average_precision": 0.8053256588531932
+        }
+      },
+      "validation": {
+        "default": {
+          "accuracy": 0.8873689010487916,
+          "macro_f1": 0.7827027417345799,
+          "log_loss": 0.2071560963282591,
+          "precision": 0.6883116883116883,
+          "recall": 0.5840220385674931,
+          "f1": 0.6318926974664679,
+          "f2": 0.6022727272727273,
+          "roc_auc": 0.9472278673470923,
+          "average_precision": 0.78399844772425
+        },
+        "selected": {
+          "accuracy": 0.8381212950296397,
+          "macro_f1": 0.7798855766335441,
+          "log_loss": 0.2071560963282591,
+          "precision": 0.5056980056980057,
+          "recall": 0.977961432506887,
+          "f1": 0.6666666666666666,
+          "f2": 0.8240482822655525,
+          "roc_auc": 0.9472278673470923,
+          "average_precision": 0.78399844772425
+        }
+      }
+    },
+    "best_counts": {
+      "threshold": 0.13651169820466486,
+      "precision": 0.5056980056980057,
+      "recall": 0.977961432506887,
+      "f1": 0.6666666666666666,
+      "f2": 0.8240482822655525,
+      "tp": 355,
+      "fp": 347,
+      "tn": 1483,
+      "fn": 8
+    },
+    "fitted_again": false,
+    "limitation": "Конфигурация и порог выбраны на одной validation; оценки и интервалы могут быть оптимистичными."
+  }
+}

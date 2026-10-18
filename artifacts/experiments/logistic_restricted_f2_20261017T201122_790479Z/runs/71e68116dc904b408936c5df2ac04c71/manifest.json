@@ -1,0 +1,349 @@
+{
+  "batch_id": "logistic_restricted_f2_20261017T201122_790479Z",
+  "status": "completed",
+  "started_at_utc": "2026-10-17T20:11:22.790479+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "mlflow": "3.17.1",
+    "scipy": "1.17.1"
+  },
+  "config": {
+    "experiment_name": "case_1_logistic_restricted_f2_validation",
+    "dataset_config": "configs/eda_16_10.json",
+    "membership_file": "Data/splits/eda_v1/membership.csv",
+    "split_manifest": "Data/splits/eda_v1/manifest.json",
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+    "notebook": "notebooks/experiments/01_logistic_regression.ipynb",
+    "output_root": "artifacts/experiments",
+    "tracking_database": "artifacts/tracking/mlflow.db",
+    "tracking_artifacts": "artifacts/tracking/mlflow_artifacts",
+    "seed": 42,
+    "binary_threshold": 0.5,
+    "selection_decimals": 12,
+    "error_examples": 10,
+    "targets": {
+      "failure_within_30d": "average_precision",
+      "fault_type": "macro_f1"
+    },
+    "feature_variants": {
+      "A_numeric": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio"
+        ],
+        "categorical": []
+      },
+      "A_tabular_restricted": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio",
+          "horizon_days"
+        ],
+        "categorical": [
+          "equipment",
+          "manual_id"
+        ]
+      },
+      "T0_tfidf": {
+        "text": [
+          "operator_log"
+        ]
+      }
+    },
+    "model_parameters": {
+      "solver": "lbfgs",
+      "l1_ratio": 0.0,
+      "max_iter": 1000,
+      "tol": 0.0001,
+      "random_state": 42
+    },
+    "search": {
+      "C": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "initial_configuration": {
+      "C": 1.0,
+      "class_weight": null
+    },
+    "reference": {
+      "strategy": "prior"
+    },
+    "batch_prefix": "logistic_restricted_f2_",
+    "search_variants": [
+      "A_numeric",
+      "A_tabular_restricted"
+    ],
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42
+    },
+    "expected_new_runs": 66,
+    "top_features": 10,
+    "initial_search": {
+      "C": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "tfidf_parameters": {
+      "analyzer": "word",
+      "lowercase": true,
+      "token_pattern": "(?u)\\b\\w\\w+\\b",
+      "min_df": 2,
+      "max_df": 1.0,
+      "sublinear_tf": true,
+      "norm": "l2",
+      "stop_words": null,
+      "strip_accents": null,
+      "use_idf": true,
+      "smooth_idf": true,
+      "max_features": null
+    },
+    "tfidf_search": {
+      "C": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ],
+      "ngram_range": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected_classifier_runs": 64,
+    "excluded_features": [
+      "required_route",
+      "severity"
+    ],
+    "feature_policy": {
+      "decision_date": "2026-10-17",
+      "basis": "Решение пользователя: исключить required_route и severity из всех обучающих входов."
+    },
+    "expected_comparisons": 10,
+    "threshold_selection": {
+      "metric": "f2",
+      "beta": 2,
+      "selection_split": "validation",
+      "positive_class": 1,
+      "decision_rule": "probability_1 >= threshold",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "selection_decimals": 12,
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "expected_threshold_models": 4,
+    "expected_threshold_comparisons": 4
+  },
+  "dataset_config": {
+    "analysis_id": "EDA-16-10",
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "seed": 42,
+    "split_version": "eda_v1",
+    "n_splits": 7,
+    "test_fold": 0,
+    "validation_fold": 1,
+    "split_group": "normalized_exact_operator_log",
+    "output_root": "artifacts/eda/EDA-16-10",
+    "notebook": "notebooks/eda/EDA-16-10.ipynb",
+    "source_notebooks": [
+      "notebooks/01_eda.ipynb",
+      "notebooks/team work/LLM_project.ipynb",
+      "notebooks/team work/LLM_project_(2).ipynb"
+    ],
+    "numeric_columns": [
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "horizon_days"
+    ],
+    "categorical_columns": [
+      "equipment",
+      "manual_id",
+      "severity",
+      "required_route"
+    ],
+    "targets": [
+      "failure_within_30d",
+      "fault_type"
+    ],
+    "min_token_documents": 10,
+    "top_tokens": 10,
+    "examples_per_class": 2,
+    "top_categories_plot": 20,
+    "iqr_multiplier": 1.5,
+    "load_tolerance_percentage_points": 1.0,
+    "comparison_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "near_duplicate_rounding": {
+      "operating_hours": -2,
+      "temperature_c": 0,
+      "vibration_mm_s": 1,
+      "pressure_bar": 1,
+      "load_ratio": 2
+    },
+    "availability": {
+      "equipment": "available_by_assumption",
+      "operating_hours": "available_by_assumption",
+      "temperature_c": "available_by_assumption",
+      "vibration_mm_s": "available_by_assumption",
+      "pressure_bar": "available_by_assumption",
+      "load_ratio": "available_by_assumption",
+      "operator_log": "available_by_assumption",
+      "manual_id": "available_by_assumption",
+      "severity": "available_by_assumption",
+      "required_route": "available_by_assumption",
+      "horizon_days": "available_by_assumption",
+      "id": "available_by_assumption"
+    },
+    "availability_basis": "Допущение пользователя от 2026-10-16: все нецелевые поля доступны на момент прогноза."
+  },
+  "source": {
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "rows": 15000,
+    "columns": [
+      "id",
+      "equipment",
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "operator_log",
+      "manual_id",
+      "fault_type",
+      "severity",
+      "required_route",
+      "horizon_days",
+      "failure_within_30d"
+    ],
+    "bytes": 3257589
+  },
+  "split": {
+    "protocol": {
+      "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+      "seed": 42,
+      "n_splits": 7,
+      "test_fold": 0,
+      "validation_fold": 1,
+      "split_group": "normalized_exact_operator_log"
+    },
+    "description": "Одинаковые operator_log после приведения регистра/пробелов остаются вместе; стратификация по паре целевых меток приблизительна.",
+    "limitation": "Общие тексты после маскирования чисел могут пересекать выборки. Это не временная проверка и не доказательство качества на неизвестных шаблонах или машинах.",
+    "sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1"
+  },
+  "source_checksums": {
+    "baseline.py": "1cfaf6f3ba6442919cfb3fdf87eee5568e349dc7001fc2fdfecdb926ba0bdda5",
+    "data.py": "2a7a4bdff2f9f79884aebe4bcfc7082b23346c91bff265a81c92476af4aef353",
+    "comparison.py": "d0ccf2e0cb91e9711e4932833581fa2fefac0938e0db1c49fb37d5d93d5646e5"
+  },
+  "notebook_source_sha256": "05b00e7e31544de6d412a1f8656d76ac7c811f397715c15e354d8a9b18585b65",
+  "config_sha256": "55998080057bc32deaa8212d5fb2c5a5feb68f633d951996a6d936fddc6ecc08",
+  "test_evaluated": false,
+  "selection_scope": "validation; train only for fitting",
+  "tracking_uri": "sqlite:///C:/Users/Mo/work/study/Магистратура/2к/1с/LLMs/artifacts/tracking/mlflow.db",
+  "authors": "Фактическое авторство участников требует подтверждения",
+  "hardware": {
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "machine": "AMD64",
+    "logical_cpus": 12,
+    "training_device": "CPU"
+  },
+  "run_id": "71e68116dc904b408936c5df2ac04c71",
+  "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/71e68116dc904b408936c5df2ac04c71",
+  "target": "fault_type",
+  "variant": "A_tabular_restricted",
+  "kind": "tabular",
+  "classes": [
+    "bearing_wear",
+    "cavitation",
+    "imbalance",
+    "normal",
+    "overheat",
+    "seal_leak"
+  ],
+  "features": [
+    "operating_hours",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "load_ratio",
+    "horizon_days",
+    "equipment",
+    "manual_id"
+  ],
+  "model_parameters": {
+    "solver": "lbfgs",
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "tol": 0.0001,
+    "random_state": 42,
+    "C": 0.1,
+    "class_weight": null
+  },
+  "tfidf_parameters": null,
+  "metrics": {
+    "train": {
+      "accuracy": 0.8271234162365086,
+      "macro_f1": 0.7770620701496046,
+      "log_loss": 0.4213768772071423
+    },
+    "validation": {
+      "accuracy": 0.8176014591883265,
+      "macro_f1": 0.7665839654030037,
+      "log_loss": 0.4405860580278079
+    }
+  },
+  "fit_seconds": 0.06515650000073947,
+  "convergence_warnings": []
+}

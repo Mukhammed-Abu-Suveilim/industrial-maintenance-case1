@@ -1,0 +1,128 @@
+{
+  "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "cpu_thread_budget": 6,
+  "note": "RF predict использует сохранённый n_jobs=1; CPU до 6 потоков.",
+  "samples": [
+    {
+      "key": "forest:A_numeric:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.3320488999997906,
+        0.3397032000002582,
+        0.3332317999993393,
+        0.33537539999997534,
+        0.3277349999998478
+      ],
+      "median_seconds": 0.3332317999993393,
+      "amortized_ms_per_record": 0.15195248517981727
+    },
+    {
+      "key": "forest:A_numeric:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.5711697000006097,
+        0.603479000000334,
+        0.5693962999994255
+      ],
+      "median_seconds": 0.5711697000006097,
+      "amortized_ms_per_record": 8.924526562509527
+    },
+    {
+      "key": "forest:A_tabular_restricted:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.37171760000001086,
+        0.39477220000026136,
+        0.36765660000037315,
+        0.37052479999965726,
+        0.3837770999998611
+      ],
+      "median_seconds": 0.37171760000001086,
+      "amortized_ms_per_record": 0.16950186958504826
+    },
+    {
+      "key": "forest:A_tabular_restricted:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.6291625000003478,
+        0.6293375000004744,
+        0.6587037999997847
+      ],
+      "median_seconds": 0.6293375000004744,
+      "amortized_ms_per_record": 9.833398437507412
+    },
+    {
+      "key": "forest:A_numeric:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.33610979999957635,
+        0.33382050000000163,
+        0.34510520000003453,
+        0.33605249999982334,
+        0.33372399999916524
+      ],
+      "median_seconds": 0.33605249999982334,
+      "amortized_ms_per_record": 0.15323871409020673
+    },
+    {
+      "key": "forest:A_numeric:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.5627999999996973,
+        0.5611897999997382,
+        0.5632310000000871
+      ],
+      "median_seconds": 0.5627999999996973,
+      "amortized_ms_per_record": 8.79374999999527
+    },
+    {
+      "key": "forest:A_tabular_restricted:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.3906858000000284,
+        0.3886923999998544,
+        0.3970211999994717,
+        0.37896050000017567,
+        0.38991150000038033
+      ],
+      "median_seconds": 0.38991150000038033,
+      "amortized_ms_per_record": 0.1777982216144005
+    },
+    {
+      "key": "forest:A_tabular_restricted:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.6411307999997007,
+        0.6343580000002476,
+        0.6427475000000413
+      ],
+      "median_seconds": 0.6411307999997007,
+      "amortized_ms_per_record": 10.017668749995323
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "files": 131,
+  "selected_rubert_models": 6,
+  "selected_tfidf_models": 2,
+  "bytes": 653165809,
+  "uploaded": false,
+  "local_documentation_links": "passed",
+  "bundle": "artifacts/cloud/rubert_tiny2_checks_20261018.zip"
+}

@@ -1,0 +1,8 @@
+﻿,Поле слева,Поле справа,Каждое левое значение связано ровно с одним правым,Каждое правое значение связано ровно с одним левым,Это причинная или временная связь
+0,equipment,manual_id,False,False,Не установлено по таблице частот.
+1,fault_type,required_route,True,True,Не установлено по таблице частот.
+2,fault_type,severity,False,False,Не установлено по таблице частот.
+3,fault_type,failure_within_30d,False,False,Не установлено по таблице частот.
+4,severity,failure_within_30d,False,False,Не установлено по таблице частот.
+5,manual_id,fault_type,False,False,Не установлено по таблице частот.
+6,manual_id,failure_within_30d,False,False,Не установлено по таблице частот.

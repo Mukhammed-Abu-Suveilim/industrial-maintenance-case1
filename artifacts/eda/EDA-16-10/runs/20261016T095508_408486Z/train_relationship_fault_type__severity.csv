@@ -1,0 +1,7 @@
+﻿fault_type,high,low,medium
+bearing_wear,119,349,793
+cavitation,319,229,521
+imbalance,3,753,391
+normal,0,4783,0
+overheat,148,426,641
+seal_leak,19,868,293

@@ -1,0 +1,6 @@
+class,feature,coefficient
+1,numeric__operating_hours,0.35672203514959117
+1,numeric__temperature_c,0.426572521709563
+1,numeric__vibration_mm_s,0.5121496999872575
+1,numeric__pressure_bar,-0.5100654815722498
+1,numeric__load_ratio,-0.005084937792415376

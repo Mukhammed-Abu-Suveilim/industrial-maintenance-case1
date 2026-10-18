@@ -1,0 +1,68 @@
+{
+  "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "cpu_thread_budget": 6,
+  "note": "RF: n_jobs=1; до шести CPU-потоков.",
+  "samples": [
+    {
+      "key": "rubert:B_text:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.7003706000004968,
+        0.6921881999996913,
+        0.6885361000004195,
+        0.6763763000008112,
+        0.6977538000001005
+      ],
+      "median_seconds": 0.6921881999996913,
+      "amortized_ms_per_record": 0.3156352941175063
+    },
+    {
+      "key": "rubert:B_text:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.09370709999984683,
+        0.09144199999991542,
+        0.09354220000022906
+      ],
+      "median_seconds": 0.09354220000022906,
+      "amortized_ms_per_record": 1.461596875003579
+    },
+    {
+      "key": "rubert:B_text:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.6931449999992765,
+        0.6943327999997564,
+        0.6956658999997671,
+        0.67955769999935,
+        0.663152799999807
+      ],
+      "median_seconds": 0.6931449999992765,
+      "amortized_ms_per_record": 0.31607159142693864
+    },
+    {
+      "key": "rubert:B_text:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.0909326000000874,
+        0.08700989999942976,
+        0.08880240000053163
+      ],
+      "median_seconds": 0.08880240000053163,
+      "amortized_ms_per_record": 1.3875375000083068
+    }
+  ]
+}

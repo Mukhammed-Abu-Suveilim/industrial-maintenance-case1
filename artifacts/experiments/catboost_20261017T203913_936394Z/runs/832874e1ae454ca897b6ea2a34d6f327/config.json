@@ -1,0 +1,125 @@
+{
+  "dataset_config": "configs/eda_16_10.json",
+  "membership_file": "Data/splits/eda_v1/membership.csv",
+  "split_manifest": "Data/splits/eda_v1/manifest.json",
+  "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+  "output_root": "artifacts/experiments",
+  "tracking_database": "artifacts/tracking/mlflow.db",
+  "tracking_artifacts": "artifacts/tracking/mlflow_artifacts",
+  "seed": 42,
+  "binary_threshold": 0.5,
+  "selection_decimals": 12,
+  "error_examples": 10,
+  "targets": {
+    "failure_within_30d": "average_precision",
+    "fault_type": "macro_f1"
+  },
+  "excluded_features": [
+    "required_route",
+    "severity"
+  ],
+  "feature_policy": {
+    "decision_date": "2026-10-17",
+    "basis": "Решение пользователя: исключить required_route и severity из всех обучающих входов."
+  },
+  "bootstrap": {
+    "n_bootstrap": 2000,
+    "seed": 42
+  },
+  "threshold_selection": {
+    "metric": "f2",
+    "beta": 2,
+    "selection_split": "validation",
+    "positive_class": 1,
+    "decision_rule": "probability_1 >= threshold",
+    "candidates": "unique probabilities plus 0, 0.5, 1",
+    "selection_decimals": 12,
+    "tie_breakers": [
+      "higher precision",
+      "higher threshold"
+    ],
+    "refit": false
+  },
+  "feature_variants": {
+    "A_numeric": {
+      "numeric": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "categorical": []
+    },
+    "A_tabular_restricted": {
+      "numeric": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days"
+      ],
+      "categorical": [
+        "equipment",
+        "manual_id"
+      ]
+    }
+  },
+  "baseline_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+  "precision_floors": [
+    0.7,
+    0.8
+  ],
+  "expected_new_runs": 64,
+  "expected_selected_models": 4,
+  "expected_threshold_models": 2,
+  "expected_f2_comparisons": 4,
+  "notebook_timeout": 1800,
+  "fit_split": "train",
+  "refit": false,
+  "family": "catboost",
+  "experiment_name": "case_1_catboost_restricted_validation",
+  "batch_prefix": "catboost_",
+  "notebook": "notebooks/experiments/03_catboost.ipynb",
+  "model_parameters": {
+    "iterations": 500,
+    "boosting_type": "Plain",
+    "random_seed": 42,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "use_best_model": false,
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "loss_functions": {
+    "failure_within_30d": "Logloss",
+    "fault_type": "MultiClass"
+  },
+  "search": {
+    "depth": [
+      4,
+      6
+    ],
+    "learning_rate": [
+      0.03,
+      0.1
+    ],
+    "l2_leaf_reg": [
+      3,
+      10
+    ],
+    "auto_class_weights": [
+      null,
+      "Balanced"
+    ]
+  },
+  "random_forest_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+  "expected_primary_comparisons": 16,
+  "tie_breakers": [
+    "smaller depth",
+    "larger l2_leaf_reg",
+    "smaller learning_rate",
+    "no class weights"
+  ]
+}

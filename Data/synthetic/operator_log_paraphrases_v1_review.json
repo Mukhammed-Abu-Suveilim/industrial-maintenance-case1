@@ -1,0 +1,33 @@
+{
+  "status": "approved",
+  "human_reviewer": "user",
+  "reviewed_ids": [
+    "normal_order",
+    "normal_synonyms",
+    "normal_short",
+    "normal_conversational",
+    "seal_order",
+    "seal_synonyms",
+    "seal_short",
+    "seal_conversational",
+    "cavitation_order",
+    "cavitation_synonyms",
+    "cavitation_short",
+    "cavitation_conversational",
+    "imbalance_order",
+    "imbalance_synonyms",
+    "imbalance_short",
+    "imbalance_conversational",
+    "overheat_order",
+    "overheat_synonyms",
+    "overheat_short",
+    "overheat_conversational",
+    "bearing_order",
+    "bearing_synonyms",
+    "bearing_short",
+    "bearing_conversational"
+  ],
+  "basis": "Пользователь: All 24 preserve the source meaning",
+  "recorded_at_utc": "2026-10-18T11:44:48.345716+00:00",
+  "text_changed_after_review": false
+}

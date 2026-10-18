@@ -1,0 +1,173 @@
+{
+  "dataset_kind": "synthetic_wording_check",
+  "version": "v1",
+  "author": "Codex; переписывание и первичная проверка смысла агентом",
+  "human_review_status": "approved",
+  "source_split": "validation",
+  "training_allowed": false,
+  "failure_labels_available": false,
+  "pairs": [
+    {
+      "source_id": "5",
+      "source_operator_log": "Работа оборудования стабильна, посторонних шумов нет. Нагрузка 46%.",
+      "fault_type": "normal",
+      "paraphrases": [
+        {
+          "id": "normal_order",
+          "style": "word_order",
+          "operator_log": "При нагрузке 46% посторонних шумов нет, оборудование работает стабильно."
+        },
+        {
+          "id": "normal_synonyms",
+          "style": "synonyms",
+          "operator_log": "Агрегат функционирует ровно; никаких необычных звуков не слышно. Загрузка составляет 46%."
+        },
+        {
+          "id": "normal_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 46%. Режим устойчивый. Чуждых работе звуков не обнаружено."
+        },
+        {
+          "id": "normal_conversational",
+          "style": "conversational",
+          "operator_log": "На 46% нагрузки всё работает ровно. Каких-либо посторонних звуков не слышу."
+        }
+      ]
+    },
+    {
+      "source_id": "13",
+      "source_operator_log": "Обнаружены следы утечки в зоне уплотнения и снижение давления. Нагрузка 93%.",
+      "fault_type": "seal_leak",
+      "paraphrases": [
+        {
+          "id": "seal_order",
+          "style": "word_order",
+          "operator_log": "При нагрузке 93% давление снизилось; возле уплотнения обнаружены следы утечки."
+        },
+        {
+          "id": "seal_synonyms",
+          "style": "synonyms",
+          "operator_log": "Уплотнительный узел имеет признаки подтекания, напор стал ниже. Агрегат загружен на 93%."
+        },
+        {
+          "id": "seal_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 93%. Подтекание около уплотнения. Отмечено падение давления."
+        },
+        {
+          "id": "seal_conversational",
+          "style": "conversational",
+          "operator_log": "Работаем на 93% нагрузки. В районе уплотнения видны подтёки, а давление упало."
+        }
+      ]
+    },
+    {
+      "source_id": "14",
+      "source_operator_log": "Слышен характерный шум, давление нестабильно, наблюдается вибрация. Нагрузка 50%.",
+      "fault_type": "cavitation",
+      "paraphrases": [
+        {
+          "id": "cavitation_order",
+          "style": "word_order",
+          "operator_log": "При нагрузке 50% наблюдается вибрация и нестабильное давление, слышен характерный шум."
+        },
+        {
+          "id": "cavitation_synonyms",
+          "style": "synonyms",
+          "operator_log": "На половинной загрузке, 50%, агрегат дрожит, напор колеблется, слышится характерный шум."
+        },
+        {
+          "id": "cavitation_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 50%. Характерный шум. Давление колеблется. Есть вибрация."
+        },
+        {
+          "id": "cavitation_conversational",
+          "style": "conversational",
+          "operator_log": "Держим нагрузку 50%. Слышу характерный шум, оборудование вибрирует, давление не держится ровно."
+        }
+      ]
+    },
+    {
+      "source_id": "39",
+      "source_operator_log": "После выхода на режим появилась повышенная вибрация и биение. Нагрузка 52%.",
+      "fault_type": "imbalance",
+      "paraphrases": [
+        {
+          "id": "imbalance_order",
+          "style": "word_order",
+          "operator_log": "Нагрузка 52%. Повышенная вибрация и биение появились после выхода оборудования на режим."
+        },
+        {
+          "id": "imbalance_synonyms",
+          "style": "synonyms",
+          "operator_log": "Как только агрегат достиг рабочего режима, усилились колебания и возникло биение. Загрузка 52%."
+        },
+        {
+          "id": "imbalance_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 52%. Выход на режим — затем повышенная вибрация с биением."
+        },
+        {
+          "id": "imbalance_conversational",
+          "style": "conversational",
+          "operator_log": "При нагрузке 52% вывели оборудование на режим, после чего стало заметно сильнее вибрировать и появилось биение."
+        }
+      ]
+    },
+    {
+      "source_id": "94",
+      "source_operator_log": "Зафиксирован устойчивый рост температуры корпуса при рабочей нагрузке. Нагрузка 43%.",
+      "fault_type": "overheat",
+      "paraphrases": [
+        {
+          "id": "overheat_order",
+          "style": "word_order",
+          "operator_log": "При рабочей нагрузке 43% температура корпуса устойчиво растёт."
+        },
+        {
+          "id": "overheat_synonyms",
+          "style": "synonyms",
+          "operator_log": "Корпус агрегата при работе на 43% нагрузки становится всё горячее; повышение температуры продолжается."
+        },
+        {
+          "id": "overheat_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 43%. Температура корпуса: устойчивый рост при работе."
+        },
+        {
+          "id": "overheat_conversational",
+          "style": "conversational",
+          "operator_log": "Оборудование работает с нагрузкой 43%, и его корпус постепенно нагревается всё сильнее."
+        }
+      ]
+    },
+    {
+      "source_id": "112",
+      "source_operator_log": "Оператор отмечает нарастающий гул в зоне подшипников и вибрацию. Нагрузка 82%.",
+      "fault_type": "bearing_wear",
+      "paraphrases": [
+        {
+          "id": "bearing_order",
+          "style": "word_order",
+          "operator_log": "При нагрузке 82% оператор наблюдает вибрацию и нарастающий гул в зоне подшипников."
+        },
+        {
+          "id": "bearing_synonyms",
+          "style": "synonyms",
+          "operator_log": "Подшипниковый узел гудит всё громче, агрегат дрожит. Загрузка составляет 82%."
+        },
+        {
+          "id": "bearing_short",
+          "style": "short_note",
+          "operator_log": "Нагрузка: 82%. Подшипники: гул усиливается. Есть вибрация."
+        },
+        {
+          "id": "bearing_conversational",
+          "style": "conversational",
+          "operator_log": "Работаем при нагрузке 82%. Около подшипников гудит всё сильнее, чувствуется вибрация."
+        }
+      ]
+    }
+  ]
+}

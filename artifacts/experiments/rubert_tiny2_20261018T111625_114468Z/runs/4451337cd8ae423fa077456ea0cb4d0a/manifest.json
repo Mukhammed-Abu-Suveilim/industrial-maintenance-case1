@@ -1,0 +1,253 @@
+{
+  "status": "completed",
+  "batch_id": "rubert_tiny2_20261018T111625_114468Z",
+  "config": {
+    "model_id": "cointegrated/rubert-tiny2",
+    "notebook": "notebooks/experiments/04_rubert_tiny2.ipynb",
+    "revision": "e8ed3b0c8bbf4fb6984c3de043bf7d2f4e5969ae",
+    "features": [
+      "operator_log"
+    ],
+    "excluded_features": [
+      "required_route",
+      "severity",
+      "id",
+      "failure_within_30d",
+      "fault_type"
+    ],
+    "dataset_config": "configs/eda_16_10.json",
+    "membership_file": "Data/splits/eda_v1/membership.csv",
+    "split_manifest": "Data/splits/eda_v1/manifest.json",
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+    "expected_sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "targets": {
+      "failure_within_30d": "average_precision",
+      "fault_type": "macro_f1"
+    },
+    "expected_classes": {
+      "failure_within_30d": [
+        0,
+        1
+      ],
+      "fault_type": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ]
+    },
+    "expected_training_runs": 2,
+    "max_length": 128,
+    "seed": 42,
+    "execution": {
+      "device": "cpu",
+      "cpu_threads": 6
+    },
+    "training": {
+      "learning_rate": 5e-05,
+      "num_train_epochs": 5,
+      "per_device_train_batch_size": 32,
+      "per_device_eval_batch_size": 64,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "lr_scheduler_type": "linear",
+      "optim": "adamw_torch",
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "max_grad_norm": 1.0,
+      "fp16": false,
+      "bf16": false,
+      "tf32": false,
+      "eval_strategy": "epoch",
+      "save_strategy": "epoch",
+      "logging_strategy": "epoch",
+      "load_best_model_at_end": false,
+      "full_determinism": true,
+      "dataloader_num_workers": 0,
+      "report_to": "none"
+    },
+    "selection_decimals": 12,
+    "binary_threshold": 0.5,
+    "threshold_selection": {
+      "metric": "f2",
+      "selection_split": "validation",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "decision_rule": "probability_1 >= threshold",
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "precision_floors": [
+      0.7,
+      0.8
+    ],
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42
+    },
+    "references": [
+      {
+        "name": "tfidf",
+        "batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+        "table": "selected_models.csv",
+        "variant": "T0_tfidf"
+      },
+      {
+        "name": "catboost_numeric",
+        "batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+        "table": "selected_models.csv",
+        "variant": "A_numeric"
+      },
+      {
+        "name": "prior",
+        "batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+        "table": "reference_results.csv",
+        "variant": "prior"
+      }
+    ],
+    "output_root": "artifacts/experiments",
+    "batch_prefix": "rubert_tiny2_",
+    "experiment_name": "rubert_tiny2_text_baseline",
+    "tracking_database": "artifacts/tracking/transformer/mlflow.db",
+    "tracking_artifacts": "artifacts/tracking/transformer/artifacts",
+    "error_examples": 20,
+    "source_files": [
+      "src/industrial_maintenance/text_transformer.py",
+      "src/industrial_maintenance/baseline.py",
+      "src/industrial_maintenance/comparison.py",
+      "src/industrial_maintenance/data.py"
+    ]
+  },
+  "source": {
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "rows": 15000,
+    "columns": [
+      "id",
+      "equipment",
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "operator_log",
+      "manual_id",
+      "fault_type",
+      "severity",
+      "required_route",
+      "horizon_days",
+      "failure_within_30d"
+    ],
+    "bytes": 3257589
+  },
+  "split": {
+    "protocol": {
+      "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+      "seed": 42,
+      "n_splits": 7,
+      "test_fold": 0,
+      "validation_fold": 1,
+      "split_group": "normalized_exact_operator_log"
+    },
+    "description": "Одинаковые operator_log после приведения регистра/пробелов остаются вместе; стратификация по паре целевых меток приблизительна.",
+    "limitation": "Общие тексты после маскирования чисел могут пересекать выборки. Это не временная проверка и не доказательство качества на неизвестных шаблонах или машинах.",
+    "sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1"
+  },
+  "libraries": {
+    "torch": "2.9.1",
+    "transformers": "4.57.6",
+    "accelerate": "1.12.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "mlflow": "3.17.1",
+    "scipy": "1.17.1"
+  },
+  "hardware": {
+    "device": "cpu",
+    "cpu_threads": 6,
+    "logical_cpus": 12,
+    "cuda_build": null,
+    "gpu": null,
+    "gpu_bytes": null,
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]"
+  },
+  "source_checksums": {
+    "src/industrial_maintenance/text_transformer.py": "af4f1a04ab38fd4eec6275060fec7b43adca5ea760108cbe108c9a2c357d5aad",
+    "src/industrial_maintenance/baseline.py": "3b370aee4d605425cb7744500996e1cdbc6a7a3db9ed227e41e03c7c019d98db",
+    "src/industrial_maintenance/comparison.py": "d0ccf2e0cb91e9711e4932833581fa2fefac0938e0db1c49fb37d5d93d5646e5",
+    "src/industrial_maintenance/data.py": "2a7a4bdff2f9f79884aebe4bcfc7082b23346c91bff265a81c92476af4aef353",
+    "pyproject.toml": "2f74bcb406d6279444768209aa9d659bf0920b4dac684e3d9563634f5f718917",
+    "uv.lock": "7616099a3677541302060b07251d24d30de709bdcbda8cf4ddc438ae2b6ce871"
+  },
+  "notebook_code_sha256": "be4246985188a80b4b185fe82652b2a25b9b6c77e7ab3d685ee838a1dcf2c143",
+  "reference_checksums": {
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/manifest.json": "fb078d745ff1c6c8dd00312e415cbd9b104bbb652b622872ebc8e01508979cbe",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/selected_models.csv": "0ce77bde4e0839892f94e76ccbada943a0d05f9ea7d76c8195d11b87ae3d977b",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c0256cbf1a754a7d970c974b7923e481/manifest.json": "ee8ca1ee2117742cf846f8dc14a254e97cbaa4fa0694c4ebc0b58db195c30099",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c0256cbf1a754a7d970c974b7923e481/validation_predictions.csv": "5338bceb4874cb063c29801b3fded975c56f723a45397192e4ee1418fd62a543",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c0256cbf1a754a7d970c974b7923e481/validation_predictions_f2.csv": "b0121029a84a57020a436eab3a2bd90bf46033e119d0409ab16100f7b566b3ab",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/a524dbade83044728f1394cc1049ce1b/manifest.json": "a3f81fa2c09558cc59456c2774a6cacf00d46166eb07371d88b142204b3be29d",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/a524dbade83044728f1394cc1049ce1b/validation_predictions.csv": "a9b16efb7845482cc1588d00fe522cc36fce56c538a1226c5376825ec0d7f642",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/manifest.json": "b2be01014323767ad524752433d8b9be5c547ad21acb26fcbdc6d010c997b9f2",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/selected_models.csv": "ad90d8483c680338c1d01402fe3640a5daf53db934f98b4d6aa284d9042d7dc9",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/runs/b1169d15559841ca8d83f48cb2c4ff87/manifest.json": "f151d3260e113fbabd6738f2e96bace82c1bdcf7cf0150f818e46f6d50876447",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/runs/b1169d15559841ca8d83f48cb2c4ff87/validation_predictions.csv": "2ccff8e14dd95eddd956e5c6538e7ce3cd2ee569416dcb678dde99eaaf373a7e",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/runs/b1169d15559841ca8d83f48cb2c4ff87/validation_predictions_f2.csv": "b74e41f468e9308812d1800749837de4b711c5b48851a0ff40d23f0b15ae8ee5",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/runs/3b50968515fe4bfbaa3c44efd65aa670/manifest.json": "bcb58b8086e8d60efb87063648e0f746fe58095124843319e3a8e8a59074a8a0",
+    "artifacts/experiments/catboost_20261017T203913_936394Z/runs/3b50968515fe4bfbaa3c44efd65aa670/validation_predictions.csv": "5747ed58f27e0cd7eefaf6081f42720d64bbbc7e20a8f4e3371d9825009afea4",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/reference_results.csv": "0bd15121b88043a7f6562c9e256846f883ada24364dd438b9a5414f8e5ed0f0a",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c2abf8dc3897473ab466615e5a546fb6/manifest.json": "65b97b4165ad8df54a8cf507cfd90180bb88182985b42273d7358644e02218f0",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c2abf8dc3897473ab466615e5a546fb6/validation_predictions.csv": "b780450f2e9d4bc61bedb3cc40852a6af525783229959d4fdf2f816744da2d95",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c2abf8dc3897473ab466615e5a546fb6/validation_predictions_f2.csv": "5977212415ceafb2a6c7939dda3cf77e4c13a2618a1e1cae668cbf7326561294",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/af0c6bda51b945378cd563fe9a46f245/manifest.json": "a45f9b5d5b969edc84f01d3a00317199b8100311a545265328c354bdf0c362c5",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/af0c6bda51b945378cd563fe9a46f245/validation_predictions.csv": "8d2a39fffab43eb611eb1a9d6b021c0b0239cef8daac43752c6f84fb013f3cfe"
+  },
+  "started_at_utc": "2026-10-18T11:16:25.114468+00:00",
+  "test_evaluated": false,
+  "completed_training_runs": 0,
+  "target": "failure_within_30d",
+  "classes": [
+    0,
+    1
+  ],
+  "features": [
+    "operator_log"
+  ],
+  "run_id": "4451337cd8ae423fa077456ea0cb4d0a",
+  "best_epoch": {
+    "eval_loss": 0.3066237270832062,
+    "eval_accuracy": 0.836297309621523,
+    "eval_macro_f1": 0.6459379785346636,
+    "eval_log_loss": 0.3066237186915295,
+    "eval_precision": 0.509009009009009,
+    "eval_recall": 0.31129476584022037,
+    "eval_f1": 0.38632478632478634,
+    "eval_f2": 0.3375149342891278,
+    "eval_roc_auc": 0.8586122025019194,
+    "eval_average_precision": 0.4507857974283547,
+    "eval_runtime": 0.782,
+    "eval_samples_per_second": 2804.321,
+    "eval_steps_per_second": 44.757,
+    "epoch": 3.0,
+    "step": 999
+  },
+  "fit_seconds": 199.4757978,
+  "reload_verified": true,
+  "trainable_parameters": 29194394
+}

@@ -1,0 +1,14 @@
+{
+  "train": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "log_loss": 0.02042889444484497,
+    "prediction_seconds": 4.017223999999715
+  },
+  "validation": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "log_loss": 0.02025462748892837,
+    "prediction_seconds": 0.8128944000000047
+  }
+}

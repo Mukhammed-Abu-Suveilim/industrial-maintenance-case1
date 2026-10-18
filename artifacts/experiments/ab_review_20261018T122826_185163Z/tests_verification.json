@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tests": 54,
+  "command": "uv run --no-sync python -m unittest discover -s tests -v",
+  "synthetic_only": true,
+  "environment": {
+    "PYTHONPATH": "src"
+  }
+}

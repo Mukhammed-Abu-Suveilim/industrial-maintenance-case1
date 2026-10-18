@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "batch_id": "random_forest_20261017T203223_834932Z",
+  "research_fit_count": 64,
+  "finished_mlflow_runs": 64,
+  "selected_count": 4,
+  "f2_model_count": 2,
+  "primary_comparison_count": 12,
+  "f2_comparison_count": 4,
+  "fresh_kernel_code_cells": 17,
+  "preserved_files_checked": 1547,
+  "forbidden_inputs_absent": true,
+  "test_evaluated": false,
+  "probabilities_identical_after_loading": true,
+  "threshold_labels_match": true,
+  "ap_roc_auc_unchanged": true,
+  "complete_grid_verified": true,
+  "source_checksum_matches": true
+}

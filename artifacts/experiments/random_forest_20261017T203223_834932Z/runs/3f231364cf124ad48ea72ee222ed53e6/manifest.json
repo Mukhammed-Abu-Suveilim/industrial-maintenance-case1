@@ -1,0 +1,475 @@
+{
+  "batch_id": "random_forest_20261017T203223_834932Z",
+  "status": "completed",
+  "started_at_utc": "2026-10-17T20:35:39.939546+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "libraries": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "mlflow": "3.17.1",
+    "scipy": "1.17.1",
+    "catboost": "1.2.10"
+  },
+  "config": {
+    "dataset_config": "configs/eda_16_10.json",
+    "membership_file": "Data/splits/eda_v1/membership.csv",
+    "split_manifest": "Data/splits/eda_v1/manifest.json",
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+    "output_root": "artifacts/experiments",
+    "tracking_database": "artifacts/tracking/mlflow.db",
+    "tracking_artifacts": "artifacts/tracking/mlflow_artifacts",
+    "seed": 42,
+    "binary_threshold": 0.5,
+    "selection_decimals": 12,
+    "error_examples": 10,
+    "targets": {
+      "failure_within_30d": "average_precision",
+      "fault_type": "macro_f1"
+    },
+    "excluded_features": [
+      "required_route",
+      "severity"
+    ],
+    "feature_policy": {
+      "decision_date": "2026-10-17",
+      "basis": "Решение пользователя: исключить required_route и severity из всех обучающих входов."
+    },
+    "bootstrap": {
+      "n_bootstrap": 2000,
+      "seed": 42
+    },
+    "threshold_selection": {
+      "metric": "f2",
+      "beta": 2,
+      "selection_split": "validation",
+      "positive_class": 1,
+      "decision_rule": "probability_1 >= threshold",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "selection_decimals": 12,
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "feature_variants": {
+      "A_numeric": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio"
+        ],
+        "categorical": []
+      },
+      "A_tabular_restricted": {
+        "numeric": [
+          "operating_hours",
+          "temperature_c",
+          "vibration_mm_s",
+          "pressure_bar",
+          "load_ratio",
+          "horizon_days"
+        ],
+        "categorical": [
+          "equipment",
+          "manual_id"
+        ]
+      }
+    },
+    "baseline_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+    "precision_floors": [
+      0.7,
+      0.8
+    ],
+    "expected_new_runs": 64,
+    "expected_selected_models": 4,
+    "expected_threshold_models": 2,
+    "expected_f2_comparisons": 4,
+    "notebook_timeout": 1800,
+    "fit_split": "train",
+    "refit": false,
+    "family": "random_forest",
+    "experiment_name": "case_1_random_forest_restricted_validation",
+    "batch_prefix": "random_forest_",
+    "notebook": "notebooks/experiments/02_random_forest.ipynb",
+    "model_parameters": {
+      "n_estimators": 300,
+      "criterion": "gini",
+      "bootstrap": true,
+      "oob_score": false,
+      "random_state": 42,
+      "n_jobs": 6
+    },
+    "search": {
+      "max_depth": [
+        8,
+        null
+      ],
+      "min_samples_leaf": [
+        1,
+        5
+      ],
+      "max_features": [
+        "sqrt",
+        1.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "expected_primary_comparisons": 12,
+    "tie_breakers": [
+      "smaller max_depth (None=infinity)",
+      "larger min_samples_leaf",
+      "sqrt",
+      "no class weights"
+    ],
+    "reuse_fitted_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+    "prediction_parameters": {
+      "n_jobs": 1
+    }
+  },
+  "dataset_config": {
+    "analysis_id": "EDA-16-10",
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "seed": 42,
+    "split_version": "eda_v1",
+    "n_splits": 7,
+    "test_fold": 0,
+    "validation_fold": 1,
+    "split_group": "normalized_exact_operator_log",
+    "output_root": "artifacts/eda/EDA-16-10",
+    "notebook": "notebooks/eda/EDA-16-10.ipynb",
+    "source_notebooks": [
+      "notebooks/01_eda.ipynb",
+      "notebooks/team work/LLM_project.ipynb",
+      "notebooks/team work/LLM_project_(2).ipynb"
+    ],
+    "numeric_columns": [
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "horizon_days"
+    ],
+    "categorical_columns": [
+      "equipment",
+      "manual_id",
+      "severity",
+      "required_route"
+    ],
+    "targets": [
+      "failure_within_30d",
+      "fault_type"
+    ],
+    "min_token_documents": 10,
+    "top_tokens": 10,
+    "examples_per_class": 2,
+    "top_categories_plot": 20,
+    "iqr_multiplier": 1.5,
+    "load_tolerance_percentage_points": 1.0,
+    "comparison_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "near_duplicate_rounding": {
+      "operating_hours": -2,
+      "temperature_c": 0,
+      "vibration_mm_s": 1,
+      "pressure_bar": 1,
+      "load_ratio": 2
+    },
+    "availability": {
+      "equipment": "available_by_assumption",
+      "operating_hours": "available_by_assumption",
+      "temperature_c": "available_by_assumption",
+      "vibration_mm_s": "available_by_assumption",
+      "pressure_bar": "available_by_assumption",
+      "load_ratio": "available_by_assumption",
+      "operator_log": "available_by_assumption",
+      "manual_id": "available_by_assumption",
+      "severity": "available_by_assumption",
+      "required_route": "available_by_assumption",
+      "horizon_days": "available_by_assumption",
+      "id": "available_by_assumption"
+    },
+    "availability_basis": "Допущение пользователя от 2026-10-16: все нецелевые поля доступны на момент прогноза."
+  },
+  "source": {
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "rows": 15000,
+    "columns": [
+      "id",
+      "equipment",
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "operator_log",
+      "manual_id",
+      "fault_type",
+      "severity",
+      "required_route",
+      "horizon_days",
+      "failure_within_30d"
+    ],
+    "bytes": 3257589
+  },
+  "split": {
+    "protocol": {
+      "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+      "seed": 42,
+      "n_splits": 7,
+      "test_fold": 0,
+      "validation_fold": 1,
+      "split_group": "normalized_exact_operator_log"
+    },
+    "description": "Одинаковые operator_log после приведения регистра/пробелов остаются вместе; стратификация по паре целевых меток приблизительна.",
+    "limitation": "Общие тексты после маскирования чисел могут пересекать выборки. Это не временная проверка и не доказательство качества на неизвестных шаблонах или машинах.",
+    "sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1"
+  },
+  "source_checksums": {
+    "baseline.py": "3b370aee4d605425cb7744500996e1cdbc6a7a3db9ed227e41e03c7c019d98db",
+    "data.py": "2a7a4bdff2f9f79884aebe4bcfc7082b23346c91bff265a81c92476af4aef353",
+    "comparison.py": "d0ccf2e0cb91e9711e4932833581fa2fefac0938e0db1c49fb37d5d93d5646e5",
+    "ensembles.py": "433c804113faac6f6bef412c64146f48c3ebcebf0af183185cd47d963f4e9b2b"
+  },
+  "notebook_source_sha256": "38f15484c66b86960dd21a891b0505f3f37124e241c849f5beb04ebe4d8ea4da",
+  "config_sha256": "bfe46802e1af8138a4b12c5f451c3206e483a75af8ee34bdf2b62f6c56295e7f",
+  "test_evaluated": false,
+  "selection_scope": "validation; train only for fitting",
+  "tracking_uri": "sqlite:///C:/Users/Mo/work/study/Магистратура/2к/1с/LLMs/artifacts/tracking/mlflow.db",
+  "authors": "Фактическое авторство участников требует подтверждения",
+  "hardware": {
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "machine": "AMD64",
+    "logical_cpus": 12,
+    "training_device": "CPU"
+  },
+  "reference_checksums": {
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/manifest.json": "fb078d745ff1c6c8dd00312e415cbd9b104bbb652b622872ebc8e01508979cbe",
+    "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/selected_models.csv": "0ce77bde4e0839892f94e76ccbada943a0d05f9ea7d76c8195d11b87ae3d977b"
+  },
+  "run_id": "3f231364cf124ad48ea72ee222ed53e6",
+  "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/3f231364cf124ad48ea72ee222ed53e6",
+  "target": "failure_within_30d",
+  "variant": "A_tabular_restricted",
+  "classes": [
+    0,
+    1
+  ],
+  "features": [
+    "operating_hours",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "load_ratio",
+    "horizon_days",
+    "equipment",
+    "manual_id"
+  ],
+  "model_parameters": {
+    "n_estimators": 300,
+    "criterion": "gini",
+    "bootstrap": true,
+    "oob_score": false,
+    "random_state": 42,
+    "n_jobs": 6,
+    "class_weight": null,
+    "max_depth": 8,
+    "max_features": 1.0,
+    "min_samples_leaf": 5
+  },
+  "resolved_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": 8,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 300,
+    "n_jobs": 1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "metrics": {
+    "train": {
+      "accuracy": 0.931299859221023,
+      "macro_f1": 0.8627898817209114,
+      "log_loss": 0.16439865150148036,
+      "precision": 0.8926174496644296,
+      "recall": 0.6705882352941176,
+      "f1": 0.7658349328214972,
+      "f2": 0.7056950831269897,
+      "roc_auc": 0.9759444702345426,
+      "average_precision": 0.9040367570343317
+    },
+    "validation": {
+      "accuracy": 0.8828089375284998,
+      "macro_f1": 0.7687932101791521,
+      "log_loss": 0.19925480698192047,
+      "precision": 0.6827586206896552,
+      "recall": 0.5454545454545454,
+      "f1": 0.6064318529862175,
+      "f2": 0.5683122847301951,
+      "roc_auc": 0.9467732466242154,
+      "average_precision": 0.776655413933024
+    }
+  },
+  "fit_seconds": 1.7789706000003207,
+  "warnings": [],
+  "prediction_parameters": {
+    "n_jobs": 1
+  },
+  "reused_completed_fit": true,
+  "fit_inputs": {
+    "split": "train",
+    "eval_set": null,
+    "refit": false
+  },
+  "train_class_counts": {
+    "0": 8870,
+    "1": 1785
+  },
+  "threshold_selection": {
+    "run_id": "3f231364cf124ad48ea72ee222ed53e6",
+    "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/3f231364cf124ad48ea72ee222ed53e6",
+    "variant": "A_tabular_restricted",
+    "default_threshold": 0.5,
+    "selected_threshold": 0.1872898061910771,
+    "candidate_count": 1103,
+    "default_precision": 0.6827586206896552,
+    "selected_precision": 0.5321100917431193,
+    "delta_precision": -0.1506485289465359,
+    "default_recall": 0.5454545454545454,
+    "selected_recall": 0.9586776859504132,
+    "delta_recall": 0.41322314049586784,
+    "default_f1": 0.6064318529862175,
+    "selected_f1": 0.6843657817109144,
+    "delta_f1": 0.07793392872469695,
+    "default_f2": 0.5683122847301951,
+    "selected_f2": 0.8262108262108262,
+    "delta_f2": 0.25789854148063107,
+    "default_average_precision": 0.776655413933024,
+    "selected_average_precision": 0.776655413933024,
+    "delta_average_precision": 0.0,
+    "default_roc_auc": 0.9467732466242154,
+    "selected_roc_auc": 0.9467732466242154,
+    "delta_roc_auc": 0.0,
+    "default_tp": 198,
+    "selected_tp": 348,
+    "delta_tp": 150,
+    "default_fp": 92,
+    "selected_fp": 306,
+    "delta_fp": 214,
+    "default_tn": 1738,
+    "selected_tn": 1524,
+    "delta_tn": -214,
+    "default_fn": 165,
+    "selected_fn": 15,
+    "delta_fn": -150,
+    "selection": {
+      "metric": "f2",
+      "beta": 2,
+      "selection_split": "validation",
+      "positive_class": 1,
+      "decision_rule": "probability_1 >= threshold",
+      "candidates": "unique probabilities plus 0, 0.5, 1",
+      "selection_decimals": 12,
+      "tie_breakers": [
+        "higher precision",
+        "higher threshold"
+      ],
+      "refit": false
+    },
+    "metrics": {
+      "train": {
+        "default": {
+          "accuracy": 0.931299859221023,
+          "macro_f1": 0.8627898817209114,
+          "log_loss": 0.16439865150148036,
+          "precision": 0.8926174496644296,
+          "recall": 0.6705882352941176,
+          "f1": 0.7658349328214972,
+          "f2": 0.7056950831269897,
+          "roc_auc": 0.9759444702345426,
+          "average_precision": 0.9040367570343317
+        },
+        "selected": {
+          "accuracy": 0.8614734866259972,
+          "macro_f1": 0.8059630138393847,
+          "log_loss": 0.16439865150148036,
+          "precision": 0.5487228003784295,
+          "recall": 0.9747899159663865,
+          "f1": 0.7021791767554479,
+          "f2": 0.8437590922315973,
+          "roc_auc": 0.9759444702345426,
+          "average_precision": 0.9040367570343317
+        }
+      },
+      "validation": {
+        "default": {
+          "accuracy": 0.8828089375284998,
+          "macro_f1": 0.7687932101791521,
+          "log_loss": 0.19925480698192047,
+          "precision": 0.6827586206896552,
+          "recall": 0.5454545454545454,
+          "f1": 0.6064318529862175,
+          "f2": 0.5683122847301951,
+          "roc_auc": 0.9467732466242154,
+          "average_precision": 0.776655413933024
+        },
+        "selected": {
+          "accuracy": 0.853625170998632,
+          "macro_f1": 0.7945426415233112,
+          "log_loss": 0.19925480698192047,
+          "precision": 0.5321100917431193,
+          "recall": 0.9586776859504132,
+          "f1": 0.6843657817109144,
+          "f2": 0.8262108262108262,
+          "roc_auc": 0.9467732466242154,
+          "average_precision": 0.776655413933024
+        }
+      }
+    },
+    "best_counts": {
+      "threshold": 0.1872898061910771,
+      "precision": 0.5321100917431193,
+      "recall": 0.9586776859504132,
+      "f1": 0.6843657817109144,
+      "f2": 0.8262108262108262,
+      "tp": 348,
+      "fp": 306,
+      "tn": 1524,
+      "fn": 15
+    },
+    "fitted_again": false,
+    "limitation": "Конфигурация и порог выбраны на одной validation; оценки и интервалы могут быть оптимистичными."
+  }
+}

@@ -1,0 +1,13 @@
+﻿,field,group,records,failures,failure_rate
+0,operating_hours,outside,0,0,
+1,operating_hours,inside,10655,1785,0.16752698263725951
+2,temperature_c,outside,958,427,0.44572025052192066
+3,temperature_c,inside,9697,1358,0.14004331236464887
+4,vibration_mm_s,outside,218,144,0.6605504587155964
+5,vibration_mm_s,inside,10437,1641,0.15722908881862604
+6,pressure_bar,outside,439,358,0.8154897494305239
+7,pressure_bar,inside,10216,1427,0.13968285043069695
+8,load_ratio,outside,0,0,
+9,load_ratio,inside,10655,1785,0.16752698263725951
+10,horizon_days,outside,0,0,
+11,horizon_days,inside,10655,1785,0.16752698263725951

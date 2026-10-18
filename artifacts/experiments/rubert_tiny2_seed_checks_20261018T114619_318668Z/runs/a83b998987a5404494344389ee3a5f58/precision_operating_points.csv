@@ -1,0 +1,3 @@
+precision_floor,status,threshold,precision,recall,f1,f2,tp,fp,tn,fn
+0.7,unattainable,,,,,,,,,
+0.8,unattainable,,,,,,,,,

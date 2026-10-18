@@ -1,0 +1,67 @@
+test_binary_metrics_use_class_one_even_in_reversed_class_order (test_baseline.PredictionTests.test_binary_metrics_use_class_one_even_in_reversed_class_order) ... ok
+test_invalid_probabilities_and_duplicate_ids_are_rejected (test_baseline.PredictionTests.test_invalid_probabilities_and_duplicate_ids_are_rejected) ... ok
+test_multiclass_probabilities_keep_their_class_names (test_baseline.PredictionTests.test_multiclass_probabilities_keep_their_class_names) ... ok
+test_single_negative_class_has_no_roc_auc_or_average_precision (test_baseline.PredictionTests.test_single_negative_class_has_no_roc_auc_or_average_precision) ... ok
+test_excluded_fields_cannot_enter_either_feature_group (test_baseline.PreprocessingTests.test_excluded_fields_cannot_enter_either_feature_group) ... ok
+test_targets_and_identifiers_are_rejected_as_features (test_baseline.PreprocessingTests.test_targets_and_identifiers_are_rejected_as_features) ... ok
+test_validation_does_not_change_scaler_or_categories (test_baseline.PreprocessingTests.test_validation_does_not_change_scaler_or_categories) ... ok
+test_availability_assumption_preserves_target_and_id_roles (test_eda_invariants.EvidenceTests.test_availability_assumption_preserves_target_and_id_roles) ... ok
+test_every_field_is_accounted_for_and_targets_are_not_inputs (test_eda_invariants.EvidenceTests.test_every_field_is_accounted_for_and_targets_are_not_inputs) ... ok
+test_export_does_not_erase_human_feature_decisions (test_eda_invariants.EvidenceTests.test_export_does_not_erase_human_feature_decisions) ... ok
+test_changed_protocol_cannot_overwrite_reserved_test (test_eda_invariants.SplitTests.test_changed_protocol_cannot_overwrite_reserved_test) ... ok
+test_cross_split_group_is_rejected (test_eda_invariants.SplitTests.test_cross_split_group_is_rejected) ... ok
+test_duplicate_ids_cannot_replace_missing_records (test_eda_invariants.SplitTests.test_duplicate_ids_cannot_replace_missing_records) ... ok
+test_repeated_logs_stay_together_and_reload_is_stable (test_eda_invariants.SplitTests.test_repeated_logs_stay_together_and_reload_is_stable) ... ok
+test_forbidden_and_misplaced_fields_are_rejected (test_ensembles.EnsembleTests.test_forbidden_and_misplaced_fields_are_rejected) ... ok
+test_forest_prediction_threads_change_without_refitting (test_ensembles.EnsembleTests.test_forest_prediction_threads_change_without_refitting) ... ok
+test_train_only_encoding_unknown_categories_and_serialization (test_ensembles.EnsembleTests.test_train_only_encoding_unknown_categories_and_serialization) ... ok
+test_empty_positive_predictions_are_excluded_even_at_zero_floor (test_ensembles.PrecisionConstraintTests.test_empty_positive_predictions_are_excluded_even_at_zero_floor) ... ok
+test_invalid_precision_floor_is_rejected (test_ensembles.PrecisionConstraintTests.test_invalid_precision_floor_is_rejected) ... ok
+test_repeated_probabilities_and_boundary_are_kept_together (test_ensembles.PrecisionConstraintTests.test_repeated_probabilities_and_boundary_are_kept_together) ... ok
+test_ties_prefer_precision_then_higher_threshold (test_ensembles.PrecisionConstraintTests.test_ties_prefer_precision_then_higher_threshold) ... ok
+test_unattainable_constraint_returns_empty_metrics (test_ensembles.PrecisionConstraintTests.test_unattainable_constraint_returns_empty_metrics) ... ok
+test_alignment_rejects_wrong_labels_and_unknown_ids (test_experiment_review.ExperimentReviewTests.test_alignment_rejects_wrong_labels_and_unknown_ids) ... ok
+test_pr_auc_is_not_silently_renamed_ap (test_experiment_review.ExperimentReviewTests.test_pr_auc_is_not_silently_renamed_ap) ... ok
+test_saved_tfidf_receives_texts_instead_of_column_names (test_experiment_review.ExperimentReviewTests.test_saved_tfidf_receives_texts_instead_of_column_names)
+Адаптер должен возвращать вероятность для каждой строки. ... ok
+test_subgroups_preserve_ids_and_undefined_auc (test_experiment_review.ExperimentReviewTests.test_subgroups_preserve_ids_and_undefined_auc) ... ok
+test_external_kernel_class_does_not_replace_project_kernel (test_notebook_runner.NotebookRunnerTests.test_external_kernel_class_does_not_replace_project_kernel)
+Исполнитель должен использовать обычное ядро своего .venv. ... ok
+test_tag_runs_only_self_contained_section (test_notebook_runner.NotebookRunnerTests.test_tag_runs_only_self_contained_section)
+Выбранный раздел не должен запускать старые ячейки fit. ... ok
+test_missing_ids_or_conflicting_truth_are_rejected (test_text_comparison.BootstrapTests.test_missing_ids_or_conflicting_truth_are_rejected) ... ok
+test_multiclass_identical_models_have_zero_interval (test_text_comparison.BootstrapTests.test_multiclass_identical_models_have_zero_interval) ... ok
+test_pairing_is_independent_of_row_order (test_text_comparison.BootstrapTests.test_pairing_is_independent_of_row_order) ... ok
+test_sampling_keeps_whole_groups_and_pairs (test_text_comparison.BootstrapTests.test_sampling_keeps_whole_groups_and_pairs) ... ok
+test_undefined_binary_repeats_are_counted (test_text_comparison.BootstrapTests.test_undefined_binary_repeats_are_counted) ... ok
+test_vocabulary_and_idf_use_only_training_text (test_text_comparison.TextTests.test_vocabulary_and_idf_use_only_training_text) ... ok
+test_cpu_is_explicit_even_when_cuda_is_present (test_text_transformer.TransformerTests.test_cpu_is_explicit_even_when_cuda_is_present) ... ok
+test_cuda_does_not_silently_fall_back_to_cpu (test_text_transformer.TransformerTests.test_cuda_does_not_silently_fall_back_to_cpu) ... ok
+test_epoch_selection_rounds_and_prefers_earlier_epoch (test_text_transformer.TransformerTests.test_epoch_selection_rounds_and_prefers_earlier_epoch) ... ok
+test_full_encoder_receives_gradients_and_reload_matches (test_text_transformer.TransformerTests.test_full_encoder_receives_gradients_and_reload_matches) ...   0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<?, ?it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<?, ?it/s]
+ok
+test_only_original_text_is_allowed (test_text_transformer.TransformerTests.test_only_original_text_is_allowed) ... ok
+test_prediction_after_epoch_training_does_not_require_evaluation (test_text_transformer.TransformerTests.test_prediction_after_epoch_training_does_not_require_evaluation) ... ok
+test_probabilities_follow_class_order_and_ids (test_text_transformer.TransformerTests.test_probabilities_follow_class_order_and_ids) ... ok
+test_synthetic_training_saves_a_selectable_checkpoint (test_text_transformer.TransformerTests.test_synthetic_training_saves_a_selectable_checkpoint) ... ok
+test_tokenizer_is_fixed_and_unknown_words_work (test_text_transformer.TransformerTests.test_tokenizer_is_fixed_and_unknown_words_work) ... ok
+test_f2_uses_fixed_labels_and_whole_paired_groups (test_thresholds.ThresholdBootstrapTests.test_f2_uses_fixed_labels_and_whole_paired_groups) ... ok
+test_f2_matches_hand_calculation (test_thresholds.ThresholdTests.test_f2_matches_hand_calculation) ... ok
+test_f2_tie_prefers_precision (test_thresholds.ThresholdTests.test_f2_tie_prefers_precision) ... ok
+test_invalid_probabilities_and_shapes_are_rejected (test_thresholds.ThresholdTests.test_invalid_probabilities_and_shapes_are_rejected) ... ok
+test_missing_or_invalid_classes_are_rejected (test_thresholds.ThresholdTests.test_missing_or_invalid_classes_are_rejected) ... ok
+test_optimum_outside_half_includes_equal_probability (test_thresholds.ThresholdTests.test_optimum_outside_half_includes_equal_probability) ... ok
+test_repeated_probabilities_extremes_and_highest_threshold_tie (test_thresholds.ThresholdTests.test_repeated_probabilities_extremes_and_highest_threshold_tie) ... ok
+test_saved_wrapper_reuses_fit_and_preserves_probabilities_and_ids (test_thresholds.ThresholdTests.test_saved_wrapper_reuses_fit_and_preserves_probabilities_and_ids) ... ok
+test_pairs_preserve_ids_and_have_no_failure_labels (test_wording_checks.WordingTests.test_pairs_preserve_ids_and_have_no_failure_labels) ... ok
+test_probabilities_follow_ids_classes_and_fixed_threshold (test_wording_checks.WordingTests.test_probabilities_follow_ids_classes_and_fixed_threshold) ... ok
+test_sources_labels_numbers_and_duplicates_are_checked (test_wording_checks.WordingTests.test_sources_labels_numbers_and_duplicates_are_checked) ... ok
+
+----------------------------------------------------------------------
+Ran 54 tests in 6.784s
+
+OK
+{'loss': 0.6932, 'grad_norm': 0.001850503496825695, 'learning_rate': 0.0, 'epoch': 1.0}
+{'eval_loss': 0.6931506395339966, 'eval_accuracy': 0.5, 'eval_macro_f1': 0.3333333333333333, 'eval_log_loss': 0.6931505778332907, 'eval_precision': 0.5, 'eval_recall': 1.0, 'eval_f1': 0.6666666666666666, 'eval_f2': 0.8333333333333334, 'eval_roc_auc': 0.0, 'eval_average_precision': 0.5, 'eval_runtime': 0.01, 'eval_samples_per_second': 200.024, 'eval_steps_per_second': 100.012, 'epoch': 1.0}
+{'train_runtime': 0.027, 'train_samples_per_second': 74.075, 'train_steps_per_second': 37.037, 'train_loss': 0.6931506395339966, 'epoch': 1.0}

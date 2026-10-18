@@ -1,0 +1,461 @@
+{
+  "status": "A_B_locked_C_D_pending_teammate_freeze",
+  "test_evaluated": false,
+  "source_review": "configs/ab_review.json",
+  "dataset_sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+  "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+  "test_size": 2152,
+  "AB_models": [
+    {
+      "key": "logistic:A_numeric:failure_within_30d",
+      "family": "logistic",
+      "target": "failure_within_30d",
+      "variant": "A_numeric",
+      "run_id": "6e7bc1cb575846deab4b1c55c23bd47f",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/6e7bc1cb575846deab4b1c55c23bd47f",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.18351760029593853,
+      "fit_seconds": 0.032975100002659,
+      "max_length": null
+    },
+    {
+      "key": "logistic:A_tabular_restricted:failure_within_30d",
+      "family": "logistic",
+      "target": "failure_within_30d",
+      "variant": "A_tabular_restricted",
+      "run_id": "f330e64b34a2445cbb93211953ac6542",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/f330e64b34a2445cbb93211953ac6542",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.1698639925256676,
+      "fit_seconds": 0.0201653000003716,
+      "max_length": null
+    },
+    {
+      "key": "logistic:T0_tfidf:failure_within_30d",
+      "family": "logistic",
+      "target": "failure_within_30d",
+      "variant": "T0_tfidf",
+      "run_id": "c0256cbf1a754a7d970c974b7923e481",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c0256cbf1a754a7d970c974b7923e481",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operator_log"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.14347796574281224,
+      "fit_seconds": 0.0611189000010199,
+      "max_length": null
+    },
+    {
+      "key": "logistic:A_numeric:fault_type",
+      "family": "logistic",
+      "target": "fault_type",
+      "variant": "A_numeric",
+      "run_id": "c7a03ae5a8f142c3bb1fb392f0506fac",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/c7a03ae5a8f142c3bb1fb392f0506fac",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 0.0371519000000262,
+      "max_length": null
+    },
+    {
+      "key": "logistic:A_tabular_restricted:fault_type",
+      "family": "logistic",
+      "target": "fault_type",
+      "variant": "A_tabular_restricted",
+      "run_id": "71e68116dc904b408936c5df2ac04c71",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/71e68116dc904b408936c5df2ac04c71",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 0.0651565000007394,
+      "max_length": null
+    },
+    {
+      "key": "logistic:T0_tfidf:fault_type",
+      "family": "logistic",
+      "target": "fault_type",
+      "variant": "T0_tfidf",
+      "run_id": "a524dbade83044728f1394cc1049ce1b",
+      "run_path": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z/runs/a524dbade83044728f1394cc1049ce1b",
+      "source_batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "features": [
+        "operator_log"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 0.0780023000006622,
+      "max_length": null
+    },
+    {
+      "key": "forest:A_numeric:failure_within_30d",
+      "family": "forest",
+      "target": "failure_within_30d",
+      "variant": "A_numeric",
+      "run_id": "6081e28363bd4d568e4ce486db5ac594",
+      "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/6081e28363bd4d568e4ce486db5ac594",
+      "source_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.18220070093700882,
+      "fit_seconds": 0.933091199996852,
+      "max_length": null
+    },
+    {
+      "key": "forest:A_tabular_restricted:failure_within_30d",
+      "family": "forest",
+      "target": "failure_within_30d",
+      "variant": "A_tabular_restricted",
+      "run_id": "3f231364cf124ad48ea72ee222ed53e6",
+      "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/3f231364cf124ad48ea72ee222ed53e6",
+      "source_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.1872898061910771,
+      "fit_seconds": 1.7789706000003207,
+      "max_length": null
+    },
+    {
+      "key": "forest:A_numeric:fault_type",
+      "family": "forest",
+      "target": "fault_type",
+      "variant": "A_numeric",
+      "run_id": "d08df3e322804da3b83bfb7059896b0e",
+      "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/d08df3e322804da3b83bfb7059896b0e",
+      "source_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 1.0912454999997865,
+      "max_length": null
+    },
+    {
+      "key": "forest:A_tabular_restricted:fault_type",
+      "family": "forest",
+      "target": "fault_type",
+      "variant": "A_tabular_restricted",
+      "run_id": "41b88bbfca4142e48468fe70f9847ed5",
+      "run_path": "artifacts/experiments/random_forest_20261017T203223_834932Z/runs/41b88bbfca4142e48468fe70f9847ed5",
+      "source_batch": "artifacts/experiments/random_forest_20261017T203223_834932Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 1.8811396999990395,
+      "max_length": null
+    },
+    {
+      "key": "catboost:A_numeric:failure_within_30d",
+      "family": "catboost",
+      "target": "failure_within_30d",
+      "variant": "A_numeric",
+      "run_id": "b1169d15559841ca8d83f48cb2c4ff87",
+      "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/b1169d15559841ca8d83f48cb2c4ff87",
+      "source_batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.13918557568898432,
+      "fit_seconds": 0.8356616999990365,
+      "max_length": null
+    },
+    {
+      "key": "catboost:A_tabular_restricted:failure_within_30d",
+      "family": "catboost",
+      "target": "failure_within_30d",
+      "variant": "A_tabular_restricted",
+      "run_id": "0ab144d540c0465c8f663c6e6872501f",
+      "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/0ab144d540c0465c8f663c6e6872501f",
+      "source_batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.13651169820466486,
+      "fit_seconds": 6.594174999998359,
+      "max_length": null
+    },
+    {
+      "key": "catboost:A_numeric:fault_type",
+      "family": "catboost",
+      "target": "fault_type",
+      "variant": "A_numeric",
+      "run_id": "3b50968515fe4bfbaa3c44efd65aa670",
+      "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/3b50968515fe4bfbaa3c44efd65aa670",
+      "source_batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 1.1542419999968845,
+      "max_length": null
+    },
+    {
+      "key": "catboost:A_tabular_restricted:fault_type",
+      "family": "catboost",
+      "target": "fault_type",
+      "variant": "A_tabular_restricted",
+      "run_id": "832874e1ae454ca897b6ea2a34d6f327",
+      "run_path": "artifacts/experiments/catboost_20261017T203913_936394Z/runs/832874e1ae454ca897b6ea2a34d6f327",
+      "source_batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+      "features": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days",
+        "equipment",
+        "manual_id"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 10.300634600000194,
+      "max_length": null
+    },
+    {
+      "key": "rubert:B_text:failure_within_30d",
+      "family": "rubert",
+      "target": "failure_within_30d",
+      "variant": "B_text",
+      "run_id": "4451337cd8ae423fa077456ea0cb4d0a",
+      "run_path": "artifacts/experiments/rubert_tiny2_20261018T111625_114468Z/runs/4451337cd8ae423fa077456ea0cb4d0a",
+      "source_batch": "artifacts/experiments/rubert_tiny2_20261018T111625_114468Z",
+      "features": [
+        "operator_log"
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "threshold": 0.13099803786189806,
+      "fit_seconds": 199.4757978,
+      "max_length": 128
+    },
+    {
+      "key": "rubert:B_text:fault_type",
+      "family": "rubert",
+      "target": "fault_type",
+      "variant": "B_text",
+      "run_id": "f93cce6aad02443f83df97faa55887ce",
+      "run_path": "artifacts/experiments/rubert_tiny2_20261018T111625_114468Z/runs/f93cce6aad02443f83df97faa55887ce",
+      "source_batch": "artifacts/experiments/rubert_tiny2_20261018T111625_114468Z",
+      "features": [
+        "operator_log"
+      ],
+      "classes": [
+        "bearing_wear",
+        "cavitation",
+        "imbalance",
+        "normal",
+        "overheat",
+        "seal_leak"
+      ],
+      "threshold": null,
+      "fit_seconds": 201.2692274000001,
+      "max_length": 128
+    }
+  ],
+  "primary_AB_keys": [
+    "catboost:A_numeric:failure_within_30d",
+    "forest:A_numeric:fault_type",
+    "logistic:T0_tfidf:failure_within_30d",
+    "logistic:T0_tfidf:fault_type",
+    "rubert:B_text:failure_within_30d",
+    "rubert:B_text:fault_type"
+  ],
+  "C_D": {
+    "owner": "Другой участник команды по подтверждению пользователя",
+    "frozen_configuration": null,
+    "required_before_test": [
+      "Входы, кодировщики, предобработка и правила выбора C",
+      "Checkpoint, классы, пороги и seed C",
+      "Корпус, поиск, параметры LLM и полные инструкции D",
+      "Набор объектов и рубрика ручного оценивания"
+    ]
+  },
+  "failure_metrics": [
+    "roc_auc",
+    "average_precision",
+    "pr_auc_trapezoid",
+    "precision",
+    "recall",
+    "f1",
+    "f2"
+  ],
+  "fault_metrics": [
+    "macro_f1",
+    "per_class_precision_recall_f1",
+    "confusion_matrix"
+  ],
+  "binary_rules": [
+    "default_0.5",
+    "validation_selected_f2"
+  ],
+  "binary_comparison": "probability_1 >= threshold",
+  "diagnosis_rule": "argmax, включая normal; независимо от отказа",
+  "refit_train_validation": false,
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 42,
+    "unit": "saved group_id",
+    "paired": true,
+    "reselect_models_or_thresholds": false,
+    "report_skipped_repeats": true
+  },
+  "external_teacher_test": "Отдельный набор; доступ и метки не подтверждены",
+  "test_use": "Однократное итоговое сравнение после фиксации C/D; без настройки"
+}

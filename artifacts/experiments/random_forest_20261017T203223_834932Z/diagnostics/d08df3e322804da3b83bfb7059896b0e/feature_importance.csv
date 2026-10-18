@@ -1,0 +1,6 @@
+feature,importance
+numeric__vibration_mm_s,0.3718941746106046
+numeric__pressure_bar,0.31187297400232317
+numeric__temperature_c,0.27211187153762195
+numeric__operating_hours,0.030147287836504867
+numeric__load_ratio,0.013973692012945361

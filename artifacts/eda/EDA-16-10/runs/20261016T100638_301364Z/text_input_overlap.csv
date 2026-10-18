@@ -1,0 +1,4 @@
+﻿,split,records,exact_logs,templates,seen_exact_share,seen_template_share
+0,train,10655,281,6,1.0,1.0
+1,validation,2193,59,6,0.0,1.0
+2,test,2152,56,6,0.0,1.0

@@ -1,0 +1,7 @@
+,bearing_wear,cavitation,imbalance,normal,overheat,seal_leak
+bearing_wear,255,0,0,0,0,0
+cavitation,0,222,0,0,0,0
+imbalance,0,0,232,0,0,0
+normal,0,0,0,1005,0,0
+overheat,0,0,0,0,252,0
+seal_leak,0,0,0,0,0,227

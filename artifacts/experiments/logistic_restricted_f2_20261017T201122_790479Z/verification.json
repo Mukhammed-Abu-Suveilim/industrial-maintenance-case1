@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "batch_id": "logistic_restricted_f2_20261017T201122_790479Z",
+  "classifier_count": 64,
+  "converged_classifiers": 64,
+  "reference_count": 2,
+  "finished_mlflow_runs": 66,
+  "threshold_model_count": 4,
+  "threshold_refit_count": 0,
+  "paired_comparisons": 10,
+  "threshold_comparisons": 4,
+  "fresh_kernel_code_cells": 17,
+  "preserved_files_checked": 1115,
+  "forbidden_inputs_absent": true,
+  "test_predictions_absent": true,
+  "test_evaluated": false,
+  "loaded_probabilities_identical": true,
+  "loaded_threshold_labels_match": true,
+  "ap_roc_auc_unchanged": true,
+  "source_checksum_matches": true
+}

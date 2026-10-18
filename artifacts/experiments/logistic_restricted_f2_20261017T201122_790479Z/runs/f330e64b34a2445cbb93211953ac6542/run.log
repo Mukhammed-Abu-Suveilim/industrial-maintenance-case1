@@ -1,0 +1,24 @@
+2026-10-17 23:11:23,692 INFO Начало эксперимента: logistic_restricted_f2_20261017T201122_790479Z
+2026-10-17 23:11:23,923 INFO Train=10655; validation=2193; test не оценивается
+2026-10-17 23:11:24,160 INFO Обучение failure_within_30d__A_numeric__C0.001__none; run_id=6e7bc1cb575846deab4b1c55c23bd47f
+2026-10-17 23:11:24,270 INFO Завершено failure_within_30d__A_numeric__C0.001__none; сходимость=True
+2026-10-17 23:11:24,339 INFO Обучение failure_within_30d__A_numeric__C0.001__balanced; run_id=a2e9dc6d167244709858c509c1caa7e0
+2026-10-17 23:11:24,422 INFO Завершено failure_within_30d__A_numeric__C0.001__balanced; сходимость=True
+2026-10-17 23:11:24,483 INFO Обучение failure_within_30d__A_numeric__C0.01__none; run_id=49e7c094570041f2a6b6049983845dd3
+2026-10-17 23:11:24,562 INFO Завершено failure_within_30d__A_numeric__C0.01__none; сходимость=True
+2026-10-17 23:11:24,618 INFO Обучение failure_within_30d__A_numeric__C0.01__balanced; run_id=f43e0eb264cb490a95c15c413d8bdc74
+2026-10-17 23:11:24,698 INFO Завершено failure_within_30d__A_numeric__C0.01__balanced; сходимость=True
+2026-10-17 23:11:24,759 INFO Обучение failure_within_30d__A_numeric__C0.1__none; run_id=5529d09ab7b04a1fa53bbe94d9d8d870
+2026-10-17 23:11:24,850 INFO Завершено failure_within_30d__A_numeric__C0.1__none; сходимость=True
+2026-10-17 23:11:24,915 INFO Обучение failure_within_30d__A_numeric__C0.1__balanced; run_id=aef68a3d93494a3da9b93bc6dbbe2172
+2026-10-17 23:11:25,008 INFO Завершено failure_within_30d__A_numeric__C0.1__balanced; сходимость=True
+2026-10-17 23:11:25,068 INFO Обучение failure_within_30d__A_numeric__C1.0__none; run_id=5541338664054c7b8eb7ce129c489b41
+2026-10-17 23:11:25,178 INFO Завершено failure_within_30d__A_numeric__C1.0__none; сходимость=True
+2026-10-17 23:11:25,246 INFO Обучение failure_within_30d__A_numeric__C1.0__balanced; run_id=17a721bf063b409eb0cbe08afa23227e
+2026-10-17 23:11:25,334 INFO Завершено failure_within_30d__A_numeric__C1.0__balanced; сходимость=True
+2026-10-17 23:11:25,402 INFO Обучение failure_within_30d__A_numeric__C10.0__none; run_id=e27cfe512a3242679b7966e337cf8a2c
+2026-10-17 23:11:25,491 INFO Завершено failure_within_30d__A_numeric__C10.0__none; сходимость=True
+2026-10-17 23:11:25,556 INFO Обучение failure_within_30d__A_numeric__C10.0__balanced; run_id=da9398abcb2444f494f5db76e7445c6d
+2026-10-17 23:11:25,645 INFO Завершено failure_within_30d__A_numeric__C10.0__balanced; сходимость=True
+2026-10-17 23:11:25,703 INFO Обучение failure_within_30d__A_tabular_restricted__C0.001__none; run_id=f330e64b34a2445cbb93211953ac6542
+2026-10-17 23:11:25,815 INFO Завершено failure_within_30d__A_tabular_restricted__C0.001__none; сходимость=True

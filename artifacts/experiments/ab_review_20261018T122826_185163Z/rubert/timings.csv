@@ -1,0 +1,3 @@
+key,fit_seconds,batch_records,batch_size,batch_median_seconds,batch_amortized_ms_per_record,single_mean_request_ms,probabilities_reproduced
+rubert:B_text:failure_within_30d,199.4757978,2193,64,0.6921881999996913,0.3156352941175063,1.461596875003579,True
+rubert:B_text:fault_type,201.2692274000001,2193,64,0.6931449999992765,0.31607159142693864,1.3875375000083068,True

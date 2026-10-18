@@ -1,0 +1,8 @@
+2026-10-17 23:39:14,573 INFO Начало эксперимента: catboost_20261017T203913_936394Z
+2026-10-17 23:39:14,798 INFO Train=10655; validation=2193; test не оценивается
+2026-10-17 23:39:15,157 INFO Обучение failure_within_30d__A_numeric__candidate00; run_id=5e6e1cc73eb641c5930ef983955493cc
+2026-10-17 23:39:16,021 INFO Завершено failure_within_30d__A_numeric__candidate00; 0.761 сек
+2026-10-17 23:39:16,128 INFO Обучение failure_within_30d__A_numeric__candidate01; run_id=583ff0bbdad243518eef2c3d61495e92
+2026-10-17 23:39:16,974 INFO Завершено failure_within_30d__A_numeric__candidate01; 0.735 сек
+2026-10-17 23:39:17,070 INFO Обучение failure_within_30d__A_numeric__candidate02; run_id=b1169d15559841ca8d83f48cb2c4ff87
+2026-10-17 23:39:17,982 INFO Завершено failure_within_30d__A_numeric__candidate02; 0.836 сек

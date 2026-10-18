@@ -1,0 +1,45 @@
+{
+  "models": [
+    {
+      "key": "logistic:T0_tfidf:failure_within_30d",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": true
+    },
+    {
+      "key": "logistic:T0_tfidf:fault_type",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": false
+    },
+    {
+      "key": "forest:A_numeric:fault_type",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": false
+    },
+    {
+      "key": "catboost:A_numeric:failure_within_30d",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": true
+    },
+    {
+      "key": "rubert:B_text:failure_within_30d",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": true
+    },
+    {
+      "key": "rubert:B_text:fault_type",
+      "probabilities_match": true,
+      "labels_match": true,
+      "f2_rule_checked": false
+    }
+  ],
+  "test_rows_included": false,
+  "archive_bytes": 221767779,
+  "archive_sha256": "f976dd1fbccf0518dbbf34be1f91bdb479276fa85f12f345d4a1702890a0fe19",
+  "archive_files_checked": 64,
+  "external_machine_tested": false
+}

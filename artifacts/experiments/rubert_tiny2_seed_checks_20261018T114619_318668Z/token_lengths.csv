@@ -1,0 +1,3 @@
+split,rows,max_tokens,mean_tokens,truncated_rows
+train,10655,20,18.20685124354763,0
+validation,2193,20,18.186046511627907,0

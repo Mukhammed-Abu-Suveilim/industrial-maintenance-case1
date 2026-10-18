@@ -1,0 +1,44 @@
+{
+  "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+  "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+  "seed": 42,
+  "split_version": "eda_v1",
+  "n_splits": 7,
+  "test_fold": 0,
+  "validation_fold": 1,
+  "split_group": "normalized_exact_operator_log",
+  "numeric_columns": [
+    "operating_hours",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "load_ratio",
+    "horizon_days"
+  ],
+  "categorical_columns": [
+    "equipment",
+    "manual_id",
+    "severity",
+    "required_route"
+  ],
+  "targets": [
+    "failure_within_30d",
+    "fault_type"
+  ],
+  "min_token_documents": 10,
+  "availability": {
+    "equipment": "available_by_assumption",
+    "operating_hours": "available_by_assumption",
+    "temperature_c": "available_by_assumption",
+    "vibration_mm_s": "available_by_assumption",
+    "pressure_bar": "available_by_assumption",
+    "load_ratio": "available_by_assumption",
+    "operator_log": "available_by_assumption",
+    "manual_id": "available_by_assumption",
+    "severity": "available_by_assumption",
+    "required_route": "available_by_assumption",
+    "horizon_days": "available_by_assumption",
+    "id": "available_by_assumption"
+  },
+  "availability_basis": "Допущение пользователя от 2026-10-16: все нецелевые поля доступны на момент прогноза."
+}

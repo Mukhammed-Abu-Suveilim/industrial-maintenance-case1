@@ -1,0 +1,9 @@
+key,target,class,train_count,train_share,validation_count,precision,recall,f1
+rubert:B_text:failure_within_30d,failure_within_30d,0,8870,0.8324730173627405,1830,0.9711684370257967,0.6994535519125683,0.8132147395171537
+rubert:B_text:failure_within_30d,failure_within_30d,1,1785,0.16752698263725951,363,0.37142857142857144,0.8953168044077136,0.5250403877221325
+rubert:B_text:fault_type,fault_type,bearing_wear,1261,0.11834819333646175,255,1.0,1.0,1.0
+rubert:B_text:fault_type,fault_type,cavitation,1069,0.1003284842796809,222,1.0,1.0,1.0
+rubert:B_text:fault_type,fault_type,imbalance,1147,0.10764899108399813,232,1.0,1.0,1.0
+rubert:B_text:fault_type,fault_type,normal,4783,0.44889723134678555,1005,1.0,1.0,1.0
+rubert:B_text:fault_type,fault_type,overheat,1215,0.11403097137494134,252,1.0,1.0,1.0
+rubert:B_text:fault_type,fault_type,seal_leak,1180,0.11074612857813233,227,1.0,1.0,1.0

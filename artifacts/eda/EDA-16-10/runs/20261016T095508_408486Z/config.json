@@ -1,0 +1,69 @@
+{
+  "analysis_id": "EDA-16-10",
+  "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+  "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+  "seed": 42,
+  "split_version": "eda_v1",
+  "n_splits": 7,
+  "test_fold": 0,
+  "validation_fold": 1,
+  "split_group": "normalized_exact_operator_log",
+  "output_root": "artifacts/eda/EDA-16-10",
+  "notebook": "notebooks/eda/EDA-16-10.ipynb",
+  "source_notebooks": [
+    "notebooks/01_eda.ipynb",
+    "notebooks/team work/LLM_project.ipynb",
+    "notebooks/team work/LLM_project_(2).ipynb"
+  ],
+  "numeric_columns": [
+    "operating_hours",
+    "temperature_c",
+    "vibration_mm_s",
+    "pressure_bar",
+    "load_ratio",
+    "horizon_days"
+  ],
+  "categorical_columns": [
+    "equipment",
+    "manual_id",
+    "severity",
+    "required_route"
+  ],
+  "targets": [
+    "failure_within_30d",
+    "fault_type"
+  ],
+  "min_token_documents": 10,
+  "top_tokens": 10,
+  "examples_per_class": 2,
+  "top_categories_plot": 20,
+  "iqr_multiplier": 1.5,
+  "load_tolerance_percentage_points": 1.0,
+  "comparison_quantiles": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "near_duplicate_rounding": {
+    "operating_hours": -2,
+    "temperature_c": 0,
+    "vibration_mm_s": 1,
+    "pressure_bar": 1,
+    "load_ratio": 2
+  },
+  "availability": {
+    "equipment": "unknown",
+    "operating_hours": "unknown",
+    "temperature_c": "unknown",
+    "vibration_mm_s": "unknown",
+    "pressure_bar": "unknown",
+    "load_ratio": "unknown",
+    "operator_log": "unknown",
+    "manual_id": "unknown",
+    "severity": "unknown",
+    "required_route": "unknown",
+    "horizon_days": "unknown"
+  }
+}

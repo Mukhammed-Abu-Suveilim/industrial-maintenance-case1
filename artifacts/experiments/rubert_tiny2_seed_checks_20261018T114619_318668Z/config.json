@@ -1,0 +1,154 @@
+{
+  "model_id": "cointegrated/rubert-tiny2",
+  "notebook": "notebooks/experiments/04_rubert_tiny2.ipynb",
+  "revision": "e8ed3b0c8bbf4fb6984c3de043bf7d2f4e5969ae",
+  "features": [
+    "operator_log"
+  ],
+  "excluded_features": [
+    "required_route",
+    "severity",
+    "id",
+    "failure_within_30d",
+    "fault_type"
+  ],
+  "dataset_config": "configs/eda_16_10.json",
+  "membership_file": "Data/splits/eda_v1/membership.csv",
+  "split_manifest": "Data/splits/eda_v1/manifest.json",
+  "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+  "expected_sizes": {
+    "train": 10655,
+    "validation": 2193,
+    "test": 2152
+  },
+  "targets": {
+    "failure_within_30d": "average_precision",
+    "fault_type": "macro_f1"
+  },
+  "expected_classes": {
+    "failure_within_30d": [
+      0,
+      1
+    ],
+    "fault_type": [
+      "bearing_wear",
+      "cavitation",
+      "imbalance",
+      "normal",
+      "overheat",
+      "seal_leak"
+    ]
+  },
+  "expected_training_runs": 4,
+  "max_length": 128,
+  "seed": 42,
+  "execution": {
+    "device": "cpu",
+    "cpu_threads": 6
+  },
+  "training": {
+    "learning_rate": 5e-05,
+    "num_train_epochs": 5,
+    "per_device_train_batch_size": 32,
+    "per_device_eval_batch_size": 64,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "lr_scheduler_type": "linear",
+    "optim": "adamw_torch",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "fp16": false,
+    "bf16": false,
+    "tf32": false,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "logging_strategy": "epoch",
+    "load_best_model_at_end": false,
+    "full_determinism": true,
+    "dataloader_num_workers": 0,
+    "report_to": "none"
+  },
+  "selection_decimals": 12,
+  "binary_threshold": 0.5,
+  "threshold_selection": {
+    "metric": "f2",
+    "selection_split": "validation",
+    "candidates": "unique probabilities plus 0, 0.5, 1",
+    "decision_rule": "probability_1 >= threshold",
+    "tie_breakers": [
+      "higher precision",
+      "higher threshold"
+    ],
+    "refit": false
+  },
+  "precision_floors": [
+    0.7,
+    0.8
+  ],
+  "bootstrap": {
+    "n_bootstrap": 2000,
+    "seed": 42
+  },
+  "references": [
+    {
+      "name": "tfidf",
+      "batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "table": "selected_models.csv",
+      "variant": "T0_tfidf"
+    },
+    {
+      "name": "catboost_numeric",
+      "batch": "artifacts/experiments/catboost_20261017T203913_936394Z",
+      "table": "selected_models.csv",
+      "variant": "A_numeric"
+    },
+    {
+      "name": "prior",
+      "batch": "artifacts/experiments/logistic_restricted_f2_20261017T201122_790479Z",
+      "table": "reference_results.csv",
+      "variant": "prior"
+    }
+  ],
+  "output_root": "artifacts/experiments",
+  "batch_prefix": "rubert_tiny2_seed_checks_",
+  "experiment_name": "rubert_tiny2_seed_stability",
+  "tracking_database": "artifacts/tracking/transformer/mlflow.db",
+  "tracking_artifacts": "artifacts/tracking/transformer/artifacts",
+  "error_examples": 20,
+  "source_files": [
+    "src/industrial_maintenance/text_transformer.py",
+    "src/industrial_maintenance/baseline.py",
+    "src/industrial_maintenance/comparison.py",
+    "src/industrial_maintenance/data.py",
+    "src/industrial_maintenance/wording_checks.py"
+  ],
+  "run_original_baseline": false,
+  "stability_checks": {
+    "seeds": [
+      17,
+      123
+    ],
+    "expected_training_runs": 4,
+    "reference_seed": 42,
+    "reference_batch": "artifacts/experiments/rubert_tiny2_20261018T111625_114468Z",
+    "reuse_fitted_batch": null,
+    "batch_prefix": "rubert_tiny2_seed_checks_",
+    "experiment_name": "rubert_tiny2_seed_stability"
+  },
+  "wording_check": {
+    "file": "Data/synthetic/operator_log_paraphrases_v1.json",
+    "sha256": "90528da47e5cbab61fff4b28fcb7d59a3872b1d90b56bc9d823f74c2ec8a7faf",
+    "review_file": "Data/synthetic/operator_log_paraphrases_v1_review.json",
+    "expected_pairs": 24,
+    "expected_sources": 6,
+    "batch_prefix": "rubert_tiny2_wording_",
+    "training_allowed": false
+  },
+  "seeds": [
+    17,
+    123
+  ],
+  "stage": "seed_stability"
+}

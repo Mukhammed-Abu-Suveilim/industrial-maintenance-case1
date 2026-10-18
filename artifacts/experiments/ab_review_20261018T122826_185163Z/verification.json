@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "research_fit_count": 0,
+  "test_evaluated": false,
+  "protected_files": 2056,
+  "protected_files_changed": [],
+  "original_notebook_cells_unchanged": {
+    "01_logistic_regression.ipynb": 30,
+    "02_random_forest.ipynb": 30,
+    "03_catboost.ipynb": 30,
+    "04_rubert_tiny2.ipynb": 27
+  },
+  "reviewed_error_ids": 30,
+  "handoff_models_verified": 6,
+  "handoff_prediction_files": 12,
+  "selected_models": 16,
+  "source_dataset_and_split_sha256_match": true,
+  "archive_sha256": "f976dd1fbccf0518dbbf34be1f91bdb479276fa85f12f345d4a1702890a0fe19",
+  "archive_bytes": 221767779,
+  "external_machine_tested": false
+}

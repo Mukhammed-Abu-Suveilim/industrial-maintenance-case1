@@ -1,0 +1,17 @@
+﻿,fault_type,records,failure_rate,field,side
+0,bearing_wear,1,1.0,temperature_c,below
+1,cavitation,1,0.0,temperature_c,below
+2,imbalance,6,0.16666666666666666,temperature_c,below
+3,normal,7,0.0,temperature_c,below
+4,seal_leak,1,1.0,temperature_c,below
+5,bearing_wear,1,1.0,temperature_c,above
+6,imbalance,1,1.0,temperature_c,above
+7,normal,1,0.0,temperature_c,above
+8,overheat,938,0.44989339019189767,temperature_c,above
+9,seal_leak,1,0.0,temperature_c,above
+10,bearing_wear,209,0.6746411483253588,vibration_mm_s,above
+11,imbalance,9,0.3333333333333333,vibration_mm_s,above
+12,cavitation,397,0.8438287153652393,pressure_bar,below
+13,seal_leak,38,0.6052631578947368,pressure_bar,below
+14,normal,2,0.0,pressure_bar,above
+15,overheat,2,0.0,pressure_bar,above

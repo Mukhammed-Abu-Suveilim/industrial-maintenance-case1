@@ -1,0 +1,72 @@
+2026-10-17 23:39:14,573 INFO Начало эксперимента: catboost_20261017T203913_936394Z
+2026-10-17 23:39:14,798 INFO Train=10655; validation=2193; test не оценивается
+2026-10-17 23:39:15,157 INFO Обучение failure_within_30d__A_numeric__candidate00; run_id=5e6e1cc73eb641c5930ef983955493cc
+2026-10-17 23:39:16,021 INFO Завершено failure_within_30d__A_numeric__candidate00; 0.761 сек
+2026-10-17 23:39:16,128 INFO Обучение failure_within_30d__A_numeric__candidate01; run_id=583ff0bbdad243518eef2c3d61495e92
+2026-10-17 23:39:16,974 INFO Завершено failure_within_30d__A_numeric__candidate01; 0.735 сек
+2026-10-17 23:39:17,070 INFO Обучение failure_within_30d__A_numeric__candidate02; run_id=b1169d15559841ca8d83f48cb2c4ff87
+2026-10-17 23:39:17,982 INFO Завершено failure_within_30d__A_numeric__candidate02; 0.836 сек
+2026-10-17 23:39:18,061 INFO Обучение failure_within_30d__A_numeric__candidate03; run_id=20e617c113c545e4a88ad307d0a961d1
+2026-10-17 23:39:18,951 INFO Завершено failure_within_30d__A_numeric__candidate03; 0.807 сек
+2026-10-17 23:39:19,033 INFO Обучение failure_within_30d__A_numeric__candidate04; run_id=b4ffc836971d41749cc949d4129f9d7c
+2026-10-17 23:39:20,186 INFO Завершено failure_within_30d__A_numeric__candidate04; 1.068 сек
+2026-10-17 23:39:20,262 INFO Обучение failure_within_30d__A_numeric__candidate05; run_id=64bbccd00dc44fea9779eff07de5fd1d
+2026-10-17 23:39:21,426 INFO Завершено failure_within_30d__A_numeric__candidate05; 1.083 сек
+2026-10-17 23:39:21,503 INFO Обучение failure_within_30d__A_numeric__candidate06; run_id=a5c9c68b5f9a4b529c4fe97983e10aba
+2026-10-17 23:39:22,677 INFO Завершено failure_within_30d__A_numeric__candidate06; 1.094 сек
+2026-10-17 23:39:22,760 INFO Обучение failure_within_30d__A_numeric__candidate07; run_id=6f64e67513cd4d9eb1db36b54e0545e5
+2026-10-17 23:39:23,891 INFO Завершено failure_within_30d__A_numeric__candidate07; 1.051 сек
+2026-10-17 23:39:23,973 INFO Обучение failure_within_30d__A_numeric__candidate08; run_id=5d9abf7189b3458db1ca2b49d2bddf07
+2026-10-17 23:39:24,869 INFO Завершено failure_within_30d__A_numeric__candidate08; 0.812 сек
+2026-10-17 23:39:24,949 INFO Обучение failure_within_30d__A_numeric__candidate09; run_id=04760d7ba2994a97a418eee4f472cb20
+2026-10-17 23:39:25,919 INFO Завершено failure_within_30d__A_numeric__candidate09; 0.893 сек
+2026-10-17 23:39:25,998 INFO Обучение failure_within_30d__A_numeric__candidate10; run_id=72a1347e1c7b408dae5ed5e9302e578a
+2026-10-17 23:39:26,895 INFO Завершено failure_within_30d__A_numeric__candidate10; 0.820 сек
+2026-10-17 23:39:26,979 INFO Обучение failure_within_30d__A_numeric__candidate11; run_id=a6e8b4815b3247f7945480449f8b2ee8
+2026-10-17 23:39:27,892 INFO Завершено failure_within_30d__A_numeric__candidate11; 0.828 сек
+2026-10-17 23:39:27,990 INFO Обучение failure_within_30d__A_numeric__candidate12; run_id=435f6d4b06334a4bba9ef17a8d2ea06d
+2026-10-17 23:39:29,165 INFO Завершено failure_within_30d__A_numeric__candidate12; 1.094 сек
+2026-10-17 23:39:29,239 INFO Обучение failure_within_30d__A_numeric__candidate13; run_id=564f6fb77e7149e8b7665a0a0695d287
+2026-10-17 23:39:30,397 INFO Завершено failure_within_30d__A_numeric__candidate13; 1.074 сек
+2026-10-17 23:39:30,477 INFO Обучение failure_within_30d__A_numeric__candidate14; run_id=037f5576213e4e8e83de426529c7a4ae
+2026-10-17 23:39:31,605 INFO Завершено failure_within_30d__A_numeric__candidate14; 1.048 сек
+2026-10-17 23:39:31,689 INFO Обучение failure_within_30d__A_numeric__candidate15; run_id=4828b1051e594b64956f02e9f15fbc0d
+2026-10-17 23:39:32,871 INFO Завершено failure_within_30d__A_numeric__candidate15; 1.102 сек
+2026-10-17 23:39:32,947 INFO Обучение failure_within_30d__A_tabular_restricted__candidate00; run_id=f0c5b61aa7e343e899bda06af6997f89
+2026-10-17 23:39:39,607 INFO Завершено failure_within_30d__A_tabular_restricted__candidate00; 6.563 сек
+2026-10-17 23:39:39,688 INFO Обучение failure_within_30d__A_tabular_restricted__candidate01; run_id=bd7aa0dde3c041a0a0061d6e53f4b9f9
+2026-10-17 23:39:45,308 INFO Завершено failure_within_30d__A_tabular_restricted__candidate01; 5.527 сек
+2026-10-17 23:39:45,389 INFO Обучение failure_within_30d__A_tabular_restricted__candidate02; run_id=0ab144d540c0465c8f663c6e6872501f
+2026-10-17 23:39:52,083 INFO Завершено failure_within_30d__A_tabular_restricted__candidate02; 6.594 сек
+2026-10-17 23:39:52,156 INFO Обучение failure_within_30d__A_tabular_restricted__candidate03; run_id=f986f7a679794d5a8455c8457be0faad
+2026-10-17 23:39:57,896 INFO Завершено failure_within_30d__A_tabular_restricted__candidate03; 5.656 сек
+2026-10-17 23:39:57,978 INFO Обучение failure_within_30d__A_tabular_restricted__candidate04; run_id=31addf3e75284de5aa6af3c190209a29
+2026-10-17 23:40:07,429 INFO Завершено failure_within_30d__A_tabular_restricted__candidate04; 9.364 сек
+2026-10-17 23:40:07,507 INFO Обучение failure_within_30d__A_tabular_restricted__candidate05; run_id=ff7a9fb1b6a24a98a0291d114b73f1f6
+2026-10-17 23:40:18,057 INFO Завершено failure_within_30d__A_tabular_restricted__candidate05; 10.460 сек
+2026-10-17 23:40:18,136 INFO Обучение failure_within_30d__A_tabular_restricted__candidate06; run_id=bdf2b3dc0ba349ebb917cdb9071ab7ca
+2026-10-17 23:40:26,566 INFO Завершено failure_within_30d__A_tabular_restricted__candidate06; 8.345 сек
+2026-10-17 23:40:26,643 INFO Обучение failure_within_30d__A_tabular_restricted__candidate07; run_id=6368609b969c4a16aa05313723418ace
+2026-10-17 23:40:35,879 INFO Завершено failure_within_30d__A_tabular_restricted__candidate07; 9.140 сек
+2026-10-17 23:40:35,957 INFO Обучение failure_within_30d__A_tabular_restricted__candidate08; run_id=02358642192449bc91216a5007dd80cb
+2026-10-17 23:40:42,619 INFO Завершено failure_within_30d__A_tabular_restricted__candidate08; 6.550 сек
+2026-10-17 23:40:42,699 INFO Обучение failure_within_30d__A_tabular_restricted__candidate09; run_id=ea23b449cdb642f98a0b8b0cba6feee4
+2026-10-17 23:40:49,468 INFO Завершено failure_within_30d__A_tabular_restricted__candidate09; 6.666 сек
+2026-10-17 23:40:49,549 INFO Обучение failure_within_30d__A_tabular_restricted__candidate10; run_id=fb0a6da7f675425e87df2fed06c4a3a7
+2026-10-17 23:40:56,135 INFO Завершено failure_within_30d__A_tabular_restricted__candidate10; 6.488 сек
+2026-10-17 23:40:56,216 INFO Обучение failure_within_30d__A_tabular_restricted__candidate11; run_id=16b368f85d204b168a109478ffb1eab7
+2026-10-17 23:41:03,336 INFO Завершено failure_within_30d__A_tabular_restricted__candidate11; 7.029 сек
+2026-10-17 23:41:03,418 INFO Обучение failure_within_30d__A_tabular_restricted__candidate12; run_id=5af8a496996c4095b168f90ae4ef10b1
+2026-10-17 23:41:12,480 INFO Завершено failure_within_30d__A_tabular_restricted__candidate12; 8.951 сек
+2026-10-17 23:41:12,567 INFO Обучение failure_within_30d__A_tabular_restricted__candidate13; run_id=d09d7a4c021246d8aa7dd4954a2d9b1d
+2026-10-17 23:41:21,938 INFO Завершено failure_within_30d__A_tabular_restricted__candidate13; 9.279 сек
+2026-10-17 23:41:22,018 INFO Обучение failure_within_30d__A_tabular_restricted__candidate14; run_id=15128a84a8e14076b41785160e4cd360
+2026-10-17 23:41:30,144 INFO Завершено failure_within_30d__A_tabular_restricted__candidate14; 8.017 сек
+2026-10-17 23:41:30,235 INFO Обучение failure_within_30d__A_tabular_restricted__candidate15; run_id=3e017388c689473b9cf9280920e6b4d7
+2026-10-17 23:41:38,863 INFO Завершено failure_within_30d__A_tabular_restricted__candidate15; 8.540 сек
+2026-10-17 23:41:38,944 INFO Обучение fault_type__A_numeric__candidate00; run_id=4c81786a935040bc8d5174de00f06752
+2026-10-17 23:41:40,010 INFO Завершено fault_type__A_numeric__candidate00; 0.881 сек
+2026-10-17 23:41:40,097 INFO Обучение fault_type__A_numeric__candidate01; run_id=991eeaaa6dc841d68891b75dd9b160ce
+2026-10-17 23:41:41,241 INFO Завершено fault_type__A_numeric__candidate01; 0.941 сек
+2026-10-17 23:41:41,341 INFO Обучение fault_type__A_numeric__candidate02; run_id=3b50968515fe4bfbaa3c44efd65aa670
+2026-10-17 23:41:42,701 INFO Завершено fault_type__A_numeric__candidate02; 1.154 сек

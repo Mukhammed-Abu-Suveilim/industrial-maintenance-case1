@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "new_training_runs": 4,
+  "mlflow_runs": 4,
+  "seeds": [
+    17,
+    123
+  ],
+  "reference_seed": 42,
+  "reference_retrained": false,
+  "wording_training_runs": 0,
+  "saved_checkpoints": 20,
+  "bootstrap_comparisons": 18,
+  "protected_files": 3171,
+  "protected_files_changed": [],
+  "test_evaluated": false,
+  "unit_tests_passed": 49,
+  "ruff_changed_files_passed": true,
+  "notebook_code_cells": 14,
+  "models_reloaded_and_verified_during_training": 4,
+  "torch_cpu_library_sha256": "25572dccdd918cb7ae2e6c656cb460264e875cdbad3f524925dd8fa5741dc3b6",
+  "torch_cpu_library_same_as_seed42_environment": true
+}

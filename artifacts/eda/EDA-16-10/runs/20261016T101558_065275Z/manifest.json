@@ -1,0 +1,149 @@
+{
+  "analysis_id": "EDA-16-10",
+  "run_id": "20261016T101558_065275Z",
+  "status": "completed",
+  "started_at_utc": "2026-10-16T10:15:58.065275+00:00",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "libraries": {
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0"
+  },
+  "config": {
+    "analysis_id": "EDA-16-10",
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "seed": 42,
+    "split_version": "eda_v1",
+    "n_splits": 7,
+    "test_fold": 0,
+    "validation_fold": 1,
+    "split_group": "normalized_exact_operator_log",
+    "output_root": "artifacts/eda/EDA-16-10",
+    "notebook": "notebooks/eda/EDA-16-10.ipynb",
+    "source_notebooks": [
+      "notebooks/01_eda.ipynb",
+      "notebooks/team work/LLM_project.ipynb",
+      "notebooks/team work/LLM_project_(2).ipynb"
+    ],
+    "numeric_columns": [
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "horizon_days"
+    ],
+    "categorical_columns": [
+      "equipment",
+      "manual_id",
+      "severity",
+      "required_route"
+    ],
+    "targets": [
+      "failure_within_30d",
+      "fault_type"
+    ],
+    "min_token_documents": 10,
+    "top_tokens": 10,
+    "examples_per_class": 2,
+    "top_categories_plot": 20,
+    "iqr_multiplier": 1.5,
+    "load_tolerance_percentage_points": 1.0,
+    "comparison_quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "near_duplicate_rounding": {
+      "operating_hours": -2,
+      "temperature_c": 0,
+      "vibration_mm_s": 1,
+      "pressure_bar": 1,
+      "load_ratio": 2
+    },
+    "availability": {
+      "equipment": "available_by_assumption",
+      "operating_hours": "available_by_assumption",
+      "temperature_c": "available_by_assumption",
+      "vibration_mm_s": "available_by_assumption",
+      "pressure_bar": "available_by_assumption",
+      "load_ratio": "available_by_assumption",
+      "operator_log": "available_by_assumption",
+      "manual_id": "available_by_assumption",
+      "severity": "available_by_assumption",
+      "required_route": "available_by_assumption",
+      "horizon_days": "available_by_assumption",
+      "id": "available_by_assumption"
+    },
+    "availability_basis": "Допущение пользователя от 2026-10-16: все нецелевые поля доступны на момент прогноза."
+  },
+  "scope": "target associations: train; input comparison: train/val",
+  "authors": "Авторство участников требует подтверждения",
+  "source": {
+    "dataset": "Data/Кейс_1_сложный_промышленность_15000.csv",
+    "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+    "rows": 15000,
+    "columns": [
+      "id",
+      "equipment",
+      "operating_hours",
+      "temperature_c",
+      "vibration_mm_s",
+      "pressure_bar",
+      "load_ratio",
+      "operator_log",
+      "manual_id",
+      "fault_type",
+      "severity",
+      "required_route",
+      "horizon_days",
+      "failure_within_30d"
+    ],
+    "bytes": 3257589
+  },
+  "split": {
+    "protocol": {
+      "sha256": "1fa90ae0ac35681c435a4b34874faf51d41e9256c8c3c991a1dfdbf700511e07",
+      "seed": 42,
+      "n_splits": 7,
+      "test_fold": 0,
+      "validation_fold": 1,
+      "split_group": "normalized_exact_operator_log"
+    },
+    "description": "Одинаковые operator_log после приведения регистра/пробелов остаются вместе; стратификация по паре целевых меток приблизительна.",
+    "limitation": "Общие тексты после маскирования чисел могут пересекать выборки. Это не временная проверка и не доказательство качества на неизвестных шаблонах или машинах.",
+    "sizes": {
+      "train": 10655,
+      "validation": 2193,
+      "test": 2152
+    },
+    "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1"
+  },
+  "source_notebooks": {
+    "notebooks/01_eda.ipynb": "6618624f6e168a23d98b89bd2c81c896e8179ecc2e7f6b512ca134993e3ac8f4",
+    "notebooks/team work/LLM_project.ipynb": "afea22e594a1548e24d34a50a7ade915c5496db70c9e649561aa667eedc18f87",
+    "notebooks/team work/LLM_project_(2).ipynb": "894bcf5c6f6800352bbf5c367036fbc08cc7275b44017f33e28f1eec314f22d1"
+  },
+  "module_checksums": {
+    "src\\industrial_maintenance\\data.py": "2a7a4bdff2f9f79884aebe4bcfc7082b23346c91bff265a81c92476af4aef353",
+    "src\\industrial_maintenance\\eda.py": "4559db126e56b8e1c504f520b25fdf4eb7fb7e8c5b01ba43efd93bf6db7b620a",
+    "src\\industrial_maintenance\\plots.py": "2304db02618929f0886d7bbef7deaded7fba82e7804aa113a414e365bd1edefb"
+  },
+  "notebook_source_sha256": "a8ffab91c2740b4b36754d01b7b2495178cc49263be604c956fb20b28eb64f7e",
+  "config_sha256": "b38fb2ad62d120145682a9bcabf685a0b0f20e9b26dbc56cf284998a8f43e60b",
+  "decision_file_sha256": "94ce77e6f205024f455a2f1a3bf4276a961d379db336d407a37a7a4b58030e1d",
+  "test_targets_used_for_feature_analysis": false,
+  "prior_full_source_eda": true,
+  "table_count": 49,
+  "figure_count": 10,
+  "duration_seconds": 6.1369236000000456
+}

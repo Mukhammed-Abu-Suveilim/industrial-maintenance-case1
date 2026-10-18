@@ -1,0 +1,1 @@
+id,y_true,y_pred,probability_bearing_wear,probability_cavitation,probability_imbalance,probability_normal,probability_overheat,probability_seal_leak,operator_log,equipment,severity

@@ -1,0 +1,160 @@
+{
+  "experiment_name": "case_1_logistic_restricted_f2_validation",
+  "dataset_config": "configs/eda_16_10.json",
+  "membership_file": "Data/splits/eda_v1/membership.csv",
+  "split_manifest": "Data/splits/eda_v1/manifest.json",
+  "membership_sha256": "7df958804864a5e37776843f66ab7ab358b74a685188df14f60eb83cddea00b1",
+  "notebook": "notebooks/experiments/01_logistic_regression.ipynb",
+  "output_root": "artifacts/experiments",
+  "tracking_database": "artifacts/tracking/mlflow.db",
+  "tracking_artifacts": "artifacts/tracking/mlflow_artifacts",
+  "seed": 42,
+  "binary_threshold": 0.5,
+  "selection_decimals": 12,
+  "error_examples": 10,
+  "targets": {
+    "failure_within_30d": "average_precision",
+    "fault_type": "macro_f1"
+  },
+  "feature_variants": {
+    "A_numeric": {
+      "numeric": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio"
+      ],
+      "categorical": []
+    },
+    "A_tabular_restricted": {
+      "numeric": [
+        "operating_hours",
+        "temperature_c",
+        "vibration_mm_s",
+        "pressure_bar",
+        "load_ratio",
+        "horizon_days"
+      ],
+      "categorical": [
+        "equipment",
+        "manual_id"
+      ]
+    },
+    "T0_tfidf": {
+      "text": [
+        "operator_log"
+      ]
+    }
+  },
+  "model_parameters": {
+    "solver": "lbfgs",
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "tol": 0.0001,
+    "random_state": 42
+  },
+  "search": {
+    "C": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ]
+  },
+  "initial_configuration": {
+    "C": 1.0,
+    "class_weight": null
+  },
+  "reference": {
+    "strategy": "prior"
+  },
+  "batch_prefix": "logistic_restricted_f2_",
+  "search_variants": [
+    "A_numeric",
+    "A_tabular_restricted"
+  ],
+  "bootstrap": {
+    "n_bootstrap": 2000,
+    "seed": 42
+  },
+  "expected_new_runs": 66,
+  "top_features": 10,
+  "initial_search": {
+    "C": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ]
+  },
+  "tfidf_parameters": {
+    "analyzer": "word",
+    "lowercase": true,
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "min_df": 2,
+    "max_df": 1.0,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "stop_words": null,
+    "strip_accents": null,
+    "use_idf": true,
+    "smooth_idf": true,
+    "max_features": null
+  },
+  "tfidf_search": {
+    "C": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ],
+    "ngram_range": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "expected_classifier_runs": 64,
+  "excluded_features": [
+    "required_route",
+    "severity"
+  ],
+  "feature_policy": {
+    "decision_date": "2026-10-17",
+    "basis": "Решение пользователя: исключить required_route и severity из всех обучающих входов."
+  },
+  "expected_comparisons": 10,
+  "threshold_selection": {
+    "metric": "f2",
+    "beta": 2,
+    "selection_split": "validation",
+    "positive_class": 1,
+    "decision_rule": "probability_1 >= threshold",
+    "candidates": "unique probabilities plus 0, 0.5, 1",
+    "selection_decimals": 12,
+    "tie_breakers": [
+      "higher precision",
+      "higher threshold"
+    ],
+    "refit": false
+  },
+  "expected_threshold_models": 4,
+  "expected_threshold_comparisons": 4
+}

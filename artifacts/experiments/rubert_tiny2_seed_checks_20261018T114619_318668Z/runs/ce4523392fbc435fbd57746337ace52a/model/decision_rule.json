@@ -1,0 +1,8 @@
+{
+  "positive_class": 1,
+  "threshold": 0.19644376520223875,
+  "rule": "probability_1 >= threshold",
+  "selection_split": "validation",
+  "selection_metric": "f2",
+  "refit": false
+}

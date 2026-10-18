@@ -1,0 +1,12 @@
+# Пример для Codex config.toml, не настройки обучения модели.
+# Сам по себе этот файл не подключает сервер к текущему сеансу.
+[mcp_servers.colab]
+command = "uvx"
+args = [
+    "--python", "3.13",
+    "--from",
+    "git+https://github.com/googlecolab/colab-mcp@b9ab3899e0f1fa493390b1fd6d54aa2e464ecdf1",
+    "colab-mcp",
+]
+startup_timeout_sec = 120
+tool_timeout_sec = 120

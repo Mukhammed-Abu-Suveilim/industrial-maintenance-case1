@@ -1,0 +1,188 @@
+{
+  "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "cpu_thread_budget": 6,
+  "note": "RF predict использует сохранённый n_jobs=1; CPU до 6 потоков.",
+  "samples": [
+    {
+      "key": "logistic:A_numeric:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.035087299999759125,
+        0.0333957000002556,
+        0.033598999999412626,
+        0.03373050000027433,
+        0.033016200000020035
+      ],
+      "median_seconds": 0.033598999999412626,
+      "amortized_ms_per_record": 0.015321021431560704
+    },
+    {
+      "key": "logistic:A_numeric:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.05992279999918537,
+        0.06010100000003149,
+        0.06193789999997534
+      ],
+      "median_seconds": 0.06010100000003149,
+      "amortized_ms_per_record": 0.939078125000492
+    },
+    {
+      "key": "logistic:A_tabular_restricted:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.08769460000075924,
+        0.08091510000031121,
+        0.08136980000017502,
+        0.08372589999999036,
+        0.08263470000019879
+      ],
+      "median_seconds": 0.08263470000019879,
+      "amortized_ms_per_record": 0.03768112175111664
+    },
+    {
+      "key": "logistic:A_tabular_restricted:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.14905460000045423,
+        0.14864370000032068,
+        0.15121459999954823
+      ],
+      "median_seconds": 0.14905460000045423,
+      "amortized_ms_per_record": 2.3289781250070973
+    },
+    {
+      "key": "logistic:T0_tfidf:failure_within_30d",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.026374199999736447,
+        0.02604350000001432,
+        0.025727899999765214,
+        0.025364799999806564,
+        0.027074700000412122
+      ],
+      "median_seconds": 0.02604350000001432,
+      "amortized_ms_per_record": 0.011875740994078577
+    },
+    {
+      "key": "logistic:T0_tfidf:failure_within_30d",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.027343199999450007,
+        0.026526399999966088,
+        0.02627169999959733
+      ],
+      "median_seconds": 0.026526399999966088,
+      "amortized_ms_per_record": 0.41447499999947013
+    },
+    {
+      "key": "logistic:A_numeric:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.03804109999964567,
+        0.03604300000006333,
+        0.03558320000047388,
+        0.03560620000007475,
+        0.03562010000041482
+      ],
+      "median_seconds": 0.03562010000041482,
+      "amortized_ms_per_record": 0.016242635659103888
+    },
+    {
+      "key": "logistic:A_numeric:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.06330009999965114,
+        0.06277520000003278,
+        0.06474299999990762
+      ],
+      "median_seconds": 0.06330009999965114,
+      "amortized_ms_per_record": 0.989064062494549
+    },
+    {
+      "key": "logistic:A_tabular_restricted:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.09061420000034559,
+        0.08625639999991108,
+        0.08481730000039533,
+        0.08401839999987715,
+        0.08443830000032904
+      ],
+      "median_seconds": 0.08481730000039533,
+      "amortized_ms_per_record": 0.03867637938914516
+    },
+    {
+      "key": "logistic:A_tabular_restricted:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.15390219999972032,
+        0.15104890000020532,
+        0.14999189999980445
+      ],
+      "median_seconds": 0.15104890000020532,
+      "amortized_ms_per_record": 2.360139062503208
+    },
+    {
+      "key": "logistic:T0_tfidf:fault_type",
+      "mode": "batch",
+      "batch_size": 64,
+      "records": 2193,
+      "repeats": 5,
+      "seconds": [
+        0.026529499999924155,
+        0.02678939999987051,
+        0.028715799999190494,
+        0.04550299999937124,
+        0.03213430000050721
+      ],
+      "median_seconds": 0.028715799999190494,
+      "amortized_ms_per_record": 0.013094300045230503
+    },
+    {
+      "key": "logistic:T0_tfidf:fault_type",
+      "mode": "single",
+      "batch_size": 1,
+      "records": 64,
+      "repeats": 3,
+      "seconds": [
+        0.02717690000008588,
+        0.025870100000247476,
+        0.02635779999945953
+      ],
+      "median_seconds": 0.02635779999945953,
+      "amortized_ms_per_record": 0.41184062499155516
+    }
+  ]
+}

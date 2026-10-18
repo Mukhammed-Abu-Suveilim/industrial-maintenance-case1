@@ -1,0 +1,15 @@
+variant,kind,field
+A_numeric,numeric,operating_hours
+A_numeric,numeric,temperature_c
+A_numeric,numeric,vibration_mm_s
+A_numeric,numeric,pressure_bar
+A_numeric,numeric,load_ratio
+A_tabular_restricted,numeric,operating_hours
+A_tabular_restricted,numeric,temperature_c
+A_tabular_restricted,numeric,vibration_mm_s
+A_tabular_restricted,numeric,pressure_bar
+A_tabular_restricted,numeric,load_ratio
+A_tabular_restricted,numeric,horizon_days
+A_tabular_restricted,categorical,equipment
+A_tabular_restricted,categorical,manual_id
+T0_tfidf,text,operator_log

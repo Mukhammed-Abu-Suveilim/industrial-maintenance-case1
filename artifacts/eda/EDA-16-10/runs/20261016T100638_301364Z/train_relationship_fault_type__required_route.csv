@@ -1,0 +1,7 @@
+﻿fault_type,balancing,bearing_diagnostics,hydraulic_inspection,no_action,seal_repair,thermal_inspection
+bearing_wear,0,1261,0,0,0,0
+cavitation,0,0,1069,0,0,0
+imbalance,1147,0,0,0,0,0
+normal,0,0,0,4783,0,0
+overheat,0,0,0,0,0,1215
+seal_leak,0,0,0,0,1180,0

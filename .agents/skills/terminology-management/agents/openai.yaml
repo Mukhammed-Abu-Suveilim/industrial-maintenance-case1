@@ -1,0 +1,6 @@
+interface:
+  display_name: "Терминология проекта"
+  short_description: "Проверка терминов и поддержка русского глоссария"
+  default_prompt: "Используй $terminology-management: проверь документацию по TERMINOLOGY.md, исправь разрешённые отклонения и предложи новые термины для согласования."
+policy:
+  allow_implicit_invocation: true
